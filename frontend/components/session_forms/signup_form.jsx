@@ -43,18 +43,19 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="Signup-form">
-          <h1 className="Signup-form-erros">{this.renderErrors()}</h1>
-          <label>First Name:
-            <input type="text" value={this.state.first_name} onChange={this.update("first_name")}/>
+          <h1 className="lets-start">Lets Get Started</h1>
+          <h5 className="Signup-form-erros">{this.renderErrors()}</h5>
+          <label>
+            <input type="text" placeholder="First Name" value={this.state.first_name} onChange={this.update("first_name")}/>
           </label>
-          <label>Last Name:
-            <input type="text" value={this.state.last_name} onChange={this.update("last_name")}/>
+          <label>
+            <input type="text" placeholder="Last Name" value={this.state.last_name} onChange={this.update("last_name")}/>
           </label>
-          <label>Email:
-            <input type="email" value={this.state.email} onChange={this.update("email")}/>
+          <label>
+            <input type="email" placeholder="Email" value={this.state.email} onChange={this.update("email")}/>
           </label>
-          <label>Password:
-            <input type="password" value={this.state.password} onChange={this.update("password")}/>
+          <label>
+            <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")}/>
           </label>
           <input type="submit" value="Sign Up!"/>
         </form>

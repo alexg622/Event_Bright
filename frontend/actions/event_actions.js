@@ -4,12 +4,13 @@ export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const REMOVE_EVENT = "REMOVE_EVENT";
 export const RECEIVE_EVENT_ERRORS = "RECEIVE_EVENT_ERRORS";
+export const CLEAR_EVENT_ERRORS = "CLEAR_EVENT_ERRORS";
 
 export const fetchEvents = () => dispatch => (
   APIUtil.fetchEvents().then(events => (
     dispatch(receiveAllEvents(events))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveEventErrors(err.responseJSON))
   ))
 );
 
@@ -17,7 +18,7 @@ export const fetchEvent = (id) => dispatch => (
   APIUtil.fetchEvent(id).then(event => (
     dispatch(receiveEvent(event))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveEventErrors(err.responseJSON))
   ))
 );
 
@@ -25,7 +26,7 @@ export const createEvent = (event) => dispatch => (
   APIUtil.createEvent(event).then(event => (
     dispatch(receiveEvent(event))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveEventErrors(err.responseJSON))
   ))
 );
 
@@ -33,7 +34,7 @@ export const updateEvent = (event) => dispatch => (
   APIUtil.updateEvent(event).then(event => (
     dispatch(receiveEvent(event))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveEventErrors(err.responseJSON))
   ))
 );
 
@@ -42,7 +43,7 @@ export const deleteEvent = (id) => dispatch => (
   APIUtil.deleteEvent(id).then(event => (
     dispatch(receiveEvent(event))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveEventErrors(err.responseJSON))
   ))
 );
 
@@ -66,4 +67,8 @@ const removeEvent = eventId => ({
 const receiveEventErrors = errors => ({
   type: RECEIVE_EVENT_ERRORS,
   errors
+})
+
+const clearEventErrors = () => ({
+  type: CLEAR_EVENT_ERRORS
 })

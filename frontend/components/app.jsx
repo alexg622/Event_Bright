@@ -8,13 +8,14 @@ import Modal from './modal';
 import NavBarContainer from './nav_bar/nav_bar_container.jsx';
 import EventIndexContainer from './events/events_index_container.jsx'
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
+import HomePage from './home_page_container.jsx'
 
 const App = () => (
   <div>
     <Modal />
     <NavBarContainer />
     <Switch>
-      <Route exact path="/" component={EventIndexContainer} />
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/events/new" component={NewEventContainer} />
      <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
      <AuthRoute exact path="/session/new" component={LoginFormContainer} />

@@ -11,6 +11,10 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  componentWillUnmount(){
+    this.props.clearSessionErrors(); 
+  }
+
   // handleSubmit(e){
   //   e.preventDefault();
   //   this.props.signin(this.state).then(success => this.props.history.push("/"))
@@ -42,13 +46,14 @@ class LoginForm extends React.Component {
   render(){
     return (
       <div className="login-form">
-        <h1 className="Login-form-erros">{this.renderErrors()}</h1>
         <form action="/action_page.php" onSubmit={this.handleSubmit} className="Login-form">
-          <label>Email
-            <input type="email" value={this.state.email} onChange={this.update("email")}/>
+          <h1>Lets Get Started</h1>
+          <h5 className="Login-form-erros">{this.renderErrors()}</h5>
+          <label>
+            <input type="email" placeholder="email" value={this.state.email} onChange={this.update("email")}/>
           </label>
-          <label>Password
-            <input type="password" value={this.state.password} onChange={this.update("password")}/>
+          <label>
+            <input type="password" placeholder="password" value={this.state.password} onChange={this.update("password")}/>
           </label>
           <input type="submit" value={this.props.formType}/>
         </form>

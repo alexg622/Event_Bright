@@ -3,6 +3,7 @@ import * as APIUtil from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const SIGNOUT_CURRENT_USER = "SIGNOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
+export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
 export const signup = user => dispatch => (
   APIUtil.signup(user).then(user => (
@@ -11,6 +12,14 @@ export const signup = user => dispatch => (
     dispatch(receiveSessionErrors(err.responseJSON))
   ))
 );
+
+// ______________________________
+// export const createTodo = todo => dispatch => (
+//   TodoAPIUtil.createTodo(todo)
+//   .then(todo => { dispatch(receiveTodo(todo)); dispatch(clearSessionErrors())},
+//   err => dispatch(receiveErrors(err.responseJSON)))
+// );
+// ______________________________
 
 export const signin = user => dispatch => (
   APIUtil.signin(user).then(user => (
@@ -38,4 +47,8 @@ const singoutCurrentUser = () => ({
 const receiveSessionErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
+})
+
+export const clearSessionErrors = () => ({
+  type: CLEAR_SESSION_ERRORS
 })

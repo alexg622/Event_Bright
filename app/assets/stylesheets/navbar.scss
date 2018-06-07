@@ -13,102 +13,113 @@ p, form, fieldset, label, input, textarea, span, article, footer, time, small {
     box-sizing: inherit;
     background: transparent;
   }
-
-
+//
+//
 .Nav-bar-image {
   width: 100%;
   height: 400px;
   // position: center;
 
 }
-
-.login-li{
-  padding-right: 12px;
-}
-
-.nav-bar{
-  padding-top: 20px;
-}
-
-.nav-bar-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 1%;
-}
-
-
-.nav-bar-ul a{
-  color: #45494E;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-#login-button{
-  color: #45494E;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.nav-bar-ul a:hover{
-  background: lightgrey;
-}
-
-
-
-
-.nav-bar-ul button{
-  color: orange;
-  font-size: 20px;
-}
-
-.my-events-li{
-  color: orange;
-  font-size: 20px;
-}
-
-button {
-  margin: 0 auto;
-  padding: 0;
-  text-decoration: none;
-  background: none;
-  border: none;
-  font-size: 20px;
-}
-
-.events-li {
-  padding-right: 70%;
-  padding-left: 10px;
-}
-// en???
-#event-link {
-  color: orange;
-  list-style: none;
-  font-style: italic;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  text-transform: none;
-  font-size: 20px;
-}
-
-#event-link:hover{
-  background: white;
-}
-
-h1 {
-  padding: 0;
-  margin: 0 auto;
-}
-
-ul {
-  margin: 0 auto;
-  padding: 0;
-}
-li {
-  margin: 0 auto;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
+//
+// .login-li{
+//   padding-right: 12px;
+// }
+//
+// .nav-bar{
+//   padding-top: 20px;
+// }
+//
+// .nav-bar-ul {
+//   list-style: none;
+//   display: flex;
+//   flex-direction: row;
+//   padding-bottom: 1%;
+// }
+//
+// .new-events-li{
+//   padding-right: 15px;
+// }
+//
+// .nav-bar-ul li button{
+//   color: #45494E;
+//   padding-right: 12px;
+//   font-size: 16px;
+//   text-transform: uppercase;
+// }
+// .nav-bar-ul a{
+//   color: #45494E;
+//   font-size: 16px;
+//   text-transform: uppercase;
+// }
+// #login-button{
+//   color: #45494E;
+//   font-size: 16px;
+//   text-transform: uppercase;
+// }
+//
+// .nav-bar-ul a:hover{
+//   background: lightgrey;
+// }
+//
+// .logout-button:hover{
+//   background: lightgrey;
+// }
+//
+//
+// .nav-bar-ul button{
+//   color: orange;
+//   font-size: 20px;
+// }
+//
+// .my-events-li{
+//   color: orange;
+//   font-size: 20px;
+// }
+//
+// button {
+//   margin: 0 auto;
+//   padding: 0;
+//   text-decoration: none;
+//   background: none;
+//   border: none;
+//   font-size: 20px;
+// }
+//
+// .events-li {
+//   padding-right: 70%;
+//   padding-left: 10px;
+// }
+// // en???
+// #event-link {
+//   color: orange;
+//   list-style: none;
+//   font-style: italic;
+//   text-decoration: none;
+//   padding: 0;
+//   margin: 0;
+//   text-transform: none;
+//   font-size: 20px;
+// }
+//
+// #event-link:hover{
+//   background: white;
+// }
+//
+// h1 {
+//   padding: 0;
+//   margin: 0 auto;
+// }
+//
+// ul {
+//   margin: 0 auto;
+//   padding: 0;
+// }
+// li {
+//   margin: 0 auto;
+//   padding: 0;
+// }
+//
+// a {
+//   text-decoration: none;
+// }

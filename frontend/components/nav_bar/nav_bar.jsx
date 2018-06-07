@@ -16,13 +16,14 @@ class NavBar extends React.Component {
   showLinks(){
     if (this.props.session.currentUser){
       return [
-        <li><button onClick={this.signout}>Log Out</button></li>,
-        <li className="my-events-li">My Events</li>
+        <li key="logout"><button className="logout-button" onClick={this.signout}>Log Out</button></li>,
+        // <li key="my-events" className="my-events-li"><Link to="/">My Events</Link></li>,
+        <li key="create-event" className="new-events-li"><Link to="/events/new">Create Event</Link></li>
       ]
     } else {
       return [
         <li key="signup" className="signup-li"><a onClick={() => this.props.openModal('signup')}>SignUp</a></li>,
-        <li key="login" className="login-li"><a onClick={() => this.props.openModal('login')}>Log In</a></li>,
+        <li key="login" className="login-li"><a onClick={() => this.props.openModal('login')}>Log In</a></li>
         // <li className="login-li" key="login"><Link to='/session/new'>Log In</Link></li>
       ];
     }
@@ -31,12 +32,13 @@ class NavBar extends React.Component {
   render(){
     return(
       <div className="nav-bar">
-      <ul className="nav-bar-ul">
-        <li className="events-li"><Link id="event-link" to="/">EventBrite</Link></li>
-        <li><Link to="/">Browse Events</Link></li>
-        {this.showLinks()}
-      </ul>
-        <img className="Nav-bar-image" src="http://www.baybridgeinn.com/assets/themes/baybridgeinn/img/Bay-Bridge-San-Francisco-Oakland.jpg" width="900px" height="400px"/>
+        <Link className="active" id="event-link" to="/">EventBrite</Link>
+        <div className="ul-div">
+          <ul className="nav-bar-ul">
+            <li key="browse events"><Link to="/">Browse Events</Link></li>
+            {this.showLinks()}
+          </ul>
+      </div>
       </div>
     )
   }

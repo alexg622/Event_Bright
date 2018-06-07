@@ -1,0 +1,86 @@
+.nav-bar-ul ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar-ul li {
+    float: right;
+}
+
+.nav-bar-ul li:last-child {
+    border-right: none;
+}
+
+
+.nav-bar-ul li a {
+    display: block;
+    color: #45494E;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-family: helvetica;
+    height: 54px;
+
+}
+.nav-bar-ul{
+  padding-right: 10px;
+}
+.ul-div{
+  display: flex;
+  float: right;
+}
+.nav-bar-ul li button {
+  display: block;
+  color: #45494E;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-family: helvetica;
+  height: 54px;
+}
+
+.nav-bar-ul li a:hover:not(.active) {
+    background-color: #EFF2F5;
+}
+.nav-bar-ul li button:hover {
+    background-color: #EFF2F5;
+}
+
+.nav-bar-ul #event-li{
+  float: left;
+}
+.active{
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  color: #45494E;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.signup-li {
+  border-left: 1px solid #f2f3f6;
+  border-right: 1px solid #f2f3f6;
+}
+.nav-bar{
+  border-bottom: 1px solid #f2f3f6;
+}
+.login-li{
+  border-left: 1px solid #f2f3f6;
+}
+
+.active {
+  color: darkorange;
+  list-style: none;
+  font-size: 23px;
+}
+
+ul{
+  list-style: none;
+}
