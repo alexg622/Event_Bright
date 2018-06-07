@@ -13,16 +13,17 @@ class NavBar extends React.Component {
     this.props.signout().then(success => this.props.history.push("/"))
   }
 
-  showSignout(){
+  showLinks(){
     if (this.props.session.currentUser){
-      return <button onClick={this.signout}>Log Out</button>
+      return [
+        <li><button onClick={this.signout}>Log Out</button></li>,
+        <li className="my-events-li">My Events</li>
+      ]
     } else {
-      return (
-        <div>
-          <Link to="/users/new">Sign Up</Link>
-         <Link to="/session/new">Log In</Link>
-        </div>
-      )
+      return [
+        <li className="signup-li" key="signup"><Link to="/users/new">Sign Up</Link></li>,
+        <li key="login"><Link to="/session/new">Log In</Link></li>
+      ];
     }
   }
 
@@ -30,8 +31,12 @@ class NavBar extends React.Component {
   render(){
     return(
       <div className="nav-bar">
-        <Link to="/">Events</Link>
-        {this.showSignout()}
+      <ul className="nav-bar-ul">
+        <li className="events-li"><Link className="event-link" to="/">EventBrite</Link></li>
+        <li><Link to="/">Browse Events</Link></li>
+        {this.showLinks()}
+      </ul>
+        <img className="Nav-bar-image" src="http://images1.fanpop.com/images/image_uploads/Golden-Gate-Bridge-san-francisco-1020074_1024_768.jpg" width="900px" height="400px"/>
       </div>
     )
   }

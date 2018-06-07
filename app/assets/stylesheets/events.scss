@@ -1,0 +1,12 @@
+.Events-ul{
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.Events-ul li{
+  list-style: none;
+}
