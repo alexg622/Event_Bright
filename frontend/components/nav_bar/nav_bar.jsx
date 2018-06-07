@@ -21,22 +21,22 @@ class NavBar extends React.Component {
       ]
     } else {
       return [
-        <li className="signup-li" key="signup"><Link to="/users/new">Sign Up</Link></li>,
-        <li key="login"><Link to="/session/new">Log In</Link></li>
+        <li key="signup" className="signup-li"><a onClick={() => this.props.openModal('signup')}>SignUp</a></li>,
+        <li key="login" className="login-li"><a onClick={() => this.props.openModal('login')}>Log In</a></li>,
+        // <li className="login-li" key="login"><Link to='/session/new'>Log In</Link></li>
       ];
     }
   }
-
 
   render(){
     return(
       <div className="nav-bar">
       <ul className="nav-bar-ul">
-        <li className="events-li"><Link className="event-link" to="/">EventBrite</Link></li>
+        <li className="events-li"><Link id="event-link" to="/">EventBrite</Link></li>
         <li><Link to="/">Browse Events</Link></li>
         {this.showLinks()}
       </ul>
-        <img className="Nav-bar-image" src="http://images1.fanpop.com/images/image_uploads/Golden-Gate-Bridge-san-francisco-1020074_1024_768.jpg" width="900px" height="400px"/>
+        <img className="Nav-bar-image" src="http://www.baybridgeinn.com/assets/themes/baybridgeinn/img/Bay-Bridge-San-Francisco-Oakland.jpg" width="900px" height="400px"/>
       </div>
     )
   }

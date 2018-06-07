@@ -11,10 +11,16 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    this.props.signin(this.state).then(success => this.props.history.push("/"))
-  }
+  // handleSubmit(e){
+  //   e.preventDefault();
+  //   this.props.signin(this.state).then(success => this.props.history.push("/"))
+  // }
+
+  handleSubmit(e) {
+   e.preventDefault();
+   const user = Object.assign({}, this.state);
+   this.props.signin(user).then(success => this.props.closeModal())
+ }
 
   update(field){
     return e => {this.setState({[field]: e.target.value})}
@@ -35,17 +41,16 @@ class LoginForm extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="login-form">
         <h1 className="Login-form-erros">{this.renderErrors()}</h1>
-        <h1>Welcome to EventBrite!</h1>
-        <form onSubmit={this.handleSubmit} className="Login-form">
-          <label>Email:
+        <form action="/action_page.php" onSubmit={this.handleSubmit} className="Login-form">
+          <label>Email
             <input type="email" value={this.state.email} onChange={this.update("email")}/>
           </label>
-          <label>Password:
+          <label>Password
             <input type="password" value={this.state.password} onChange={this.update("password")}/>
           </label>
-          <button>Login!</button>
+          <input type="submit" value={this.props.formType}/>
         </form>
       </div>
     )

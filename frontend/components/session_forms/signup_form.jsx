@@ -13,9 +13,14 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(e){
+  // handleSubmit(e){
+  //   e.preventDefault();
+  //   this.props.signup(this.state).then(success => this.props.history.push("/"))
+  // }
+  handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state).then(success => this.props.history.push("/"))
+    const user = Object.assign({}, this.state);
+    this.props.signup(user).then(success => this.props.closeModal());
   }
 
   update(field){
@@ -37,9 +42,8 @@ class SessionForm extends React.Component {
   render(){
     return (
       <div>
-        <h1 className="Signup-form-erros">{this.renderErrors()}</h1>
-        <h1>Welcome to EventBrite</h1>
         <form onSubmit={this.handleSubmit} className="Signup-form">
+          <h1 className="Signup-form-erros">{this.renderErrors()}</h1>
           <label>First Name:
             <input type="text" value={this.state.first_name} onChange={this.update("first_name")}/>
           </label>
@@ -52,7 +56,7 @@ class SessionForm extends React.Component {
           <label>Password:
             <input type="password" value={this.state.password} onChange={this.update("password")}/>
           </label>
-          <button>Sign up!</button>
+          <input type="submit" value="Sign Up!"/>
         </form>
       </div>
     )

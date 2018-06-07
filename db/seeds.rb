@@ -31,3 +31,9 @@ zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
 Event.create(title: "Wills Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
+Event.create(title: "Cereal Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
+zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
+Event.create(title: "Breakfast Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
+zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
