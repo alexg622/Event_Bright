@@ -18,6 +18,10 @@ class NewEvent extends React.Component {
     return e => this.setState({[field]: e.target.value})
   }
 
+  componentWillUnmount(){
+    this.props.clearEventErrors(); 
+  }
+
   renderErrors() {
   return(
     <ul>
@@ -65,6 +69,7 @@ class NewEvent extends React.Component {
           </label>
           <input type="submit" value="Create Event!"/>
         </form>
+        <footer></footer>
       </div>
     )
   }

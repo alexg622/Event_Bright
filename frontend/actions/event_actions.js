@@ -69,6 +69,6 @@ const receiveEventErrors = errors => ({
   errors
 })
 
-const clearEventErrors = () => ({
+export const clearEventErrors = () => ({
   type: CLEAR_EVENT_ERRORS
 })

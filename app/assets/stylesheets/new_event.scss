@@ -2,12 +2,12 @@
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 60px;
-  margin: 0 auto; 
 }
 
 .form-div{
   display: flex;
   justify-content: center;
+  // padding-top: 10px
 }
 
 .New-event-form input{
@@ -67,6 +67,8 @@
 .New-event-form h5{
   color: red;
 }
+
+
 
 // input[type=email], select{
 //     width: 100%;

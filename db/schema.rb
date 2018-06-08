@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_06_212143) do
+ActiveRecord::Schema.define(version: 2018_06_08_164845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_bookmarks_on_event_id"
+    t.index ["user_id", "event_id"], name: "index_bookmarks_on_user_id_and_event_id", unique: true
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "img_url", null: false
+    t.string "type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_categories_on_type", unique: true
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title", null: false
@@ -30,6 +48,26 @@ ActiveRecord::Schema.define(version: 2018_06_06_212143) do
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_events_on_title", unique: true
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_tags_on_category_id"
+    t.index ["event_id", "category_id"], name: "index_tags_on_event_id_and_category_id", unique: true
+    t.index ["event_id"], name: "index_tags_on_event_id"
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_tickets_on_event_id"
+    t.index ["user_id", "event_id"], name: "index_tickets_on_user_id_and_event_id", unique: true
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
