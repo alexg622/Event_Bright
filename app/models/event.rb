@@ -24,5 +24,23 @@ class Event < ApplicationRecord
   belongs_to :author,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: :User 
+    class_name: :User
+
+  has_many :tickets,
+    primary_key: :id,
+    foreign_key: :event_id,
+    class_name: :Ticket
+
+  has_many :users,
+    through: :tickets,
+    source: :user 
+
+  has_many :tags,
+    primary_key: :id,
+    foreign_key: :event_id,
+    class_name: :Tag
+
+  has_many :categories,
+    through: :tags,
+    source: :category
 end

@@ -5,5 +5,10 @@ class Tag < ApplicationRecord
   belongs_to :event,
     primary_key: :id,
     foreign_key: :event_id,
-    class_name: :Event 
+    class_name: :Event
+
+  belongs_to :category,
+    primary_key: :id,
+    foreign_key: :category_id,
+    class_name: :Category
 end

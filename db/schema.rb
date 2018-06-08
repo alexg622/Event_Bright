@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 2018_06_08_164845) do
 
   create_table "categories", force: :cascade do |t|
     t.string "img_url", null: false
-    t.string "type", null: false
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["type"], name: "index_categories_on_type", unique: true
+    t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
   create_table "events", force: :cascade do |t|

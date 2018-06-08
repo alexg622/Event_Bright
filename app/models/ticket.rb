@@ -10,5 +10,5 @@ class Ticket < ApplicationRecord
   belongs_to :event,
     primary_key: :id,
     foreign_key: :event_id,
-    class_name: :Event 
+    class_name: :Event
 end

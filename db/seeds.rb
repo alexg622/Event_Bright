@@ -10,30 +10,36 @@ alex = User.create(first_name: "Alex", last_name: "Gonzalez", email: "alex@mail.
 
 Event.destroy_all
 
-Event.create(title: "Alexs Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event1 = Event.create(title: "Alexs Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Alex Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event2 = Event.create(title: "Alex Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Ale Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event3 = Event.create(title: "Ale Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Al Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event4 = Event.create(title: "Al Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "A Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event5 = Event.create(title: "A Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Bills Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event6 = Event.create(title: "Bills Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Wills Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event7 = Event.create(title: "Wills Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Cereal Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event8 = Event.create(title: "Cereal Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
-Event.create(title: "Breakfast Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
+event9 = Event.create(title: "Breakfast Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",
 zipcode: "94451", price: 222.25, details: "Fun party", user_id: alex.id)
+
+music = Category.create(name: "Music", img_url: "test")
+show = Category.create(name: "Show", img_url: "Test2")
+
+tag1 = Tag.create(event_id: event1.id, category_id: music.id)
+tag2 = Tag.create(event_id: event1.id, category_id: show.id)
