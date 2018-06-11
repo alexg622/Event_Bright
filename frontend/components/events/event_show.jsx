@@ -4,6 +4,20 @@ import { withRouter } from 'react-router-dom';
 class EventShow extends React.Component {
   constructor(props){
     super(props)
+    this.state = {
+      1: "January",
+      2: "February",
+      3: "March",
+      4: "April",
+      5: "May",
+      6: "June",
+      7: "July",
+      8: "August",
+      9: "September",
+      10: "October",
+      11: "November",
+      12: "December"
+    }
   }
 
 componentDidMount(){
@@ -25,11 +39,11 @@ componentWillReceiveProps(nextProps){
 
 
   render(){
-
     if (this.props.event === undefined){
       return null
     }
-    console.log();
+    const month = new Date(this.props.event.start_time).getMonth()
+    const day = new Date(this.props.event.start_time).getDay()
     return(
       <div>
         <div className="event-show-div">
@@ -39,7 +53,8 @@ componentWillReceiveProps(nextProps){
           <section className="event-info-section">
             <div className="div-for-ul">
               <ul className="event-show-ul">
-                <li className="date-li">{this.props.event.start_time}-{this.props.event.end_time}</li>
+                <li className="date-li">{this.state[month]}</li>
+                <li className="day-li">{day}</li>
                 <li className="title-li">{this.props.event.title}</li>
                 <li className="author-li">By {this.props.author.first_name + " " + this.props.author.last_name}</li>
                 <li className="price-li"><h3>${this.props.event.price}</h3></li>
