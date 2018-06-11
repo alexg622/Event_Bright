@@ -11,3 +11,11 @@ json.author do
     json.extract! @event.author, :first_name, :last_name, :email, :id
   end
 end
+
+json.categories do
+  @categories.each do |category|
+    json.set! category.id do
+      json.extract! category, :name, :img_url
+    end
+  end
+end 

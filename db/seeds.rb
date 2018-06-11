@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Event.destroy_all
+Tag.destroy_all
+Category.destroy_all
+
 alex = User.create(first_name: "Alex", last_name: "Gonzalez", email: "alex@mail.com", password: "password")
 
-Event.destroy_all
 
 event1 = Event.create(title: "Alexs Event", img_url: "http://2.bp.blogspot.com/-m7PDosYY3_c/T318H57Cs1I/AAAAAAAAHlA/4jy4UBdZ1MY/s1600/cute-puppy-dogs-puppies-pictures-91.jpg", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",

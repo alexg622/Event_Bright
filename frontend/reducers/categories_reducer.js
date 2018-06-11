@@ -1,5 +1,6 @@
-import merger from 'lodash/merge';
+import merge from 'lodash/merge';
 import { RECEIVE_ALL_CATEGORIES, RECEIVE_CATEGORY } from '../actions/category_actions';
+import { RECEIVE_EVENT } from '../actions/event_actions';
 
 const categoriesReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -8,6 +9,8 @@ const categoriesReducer = (state = {}, action) => {
       return merge({}, state, action.categories)
     case RECEIVE_CATEGORY:
       return merge({}, state, action.category)
+    case RECEIVE_EVENT:
+      return merge({}, state, action.categories)
     default:
       return state
   }

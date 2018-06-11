@@ -5,18 +5,18 @@ class EventShow extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      1: "January",
-      2: "February",
-      3: "March",
-      4: "April",
-      5: "May",
-      6: "June",
-      7: "July",
-      8: "August",
-      9: "September",
-      10: "October",
-      11: "November",
-      12: "December"
+      1: "JAN",
+      2: "FEB",
+      3: "MAR",
+      4: "APR",
+      5: "MAY",
+      6: "JUN",
+      7: "JUL",
+      8: "AUG",
+      9: "SEP",
+      10: "OCT",
+      11: "NOV",
+      12: "DEC"
     }
   }
 
@@ -45,25 +45,25 @@ componentWillReceiveProps(nextProps){
     const month = new Date(this.props.event.start_time).getMonth()
     const day = new Date(this.props.event.start_time).getDay()
     return(
-      <div>
+      <div className="main-div">
         <div className="event-show-div">
-          <section className="event-show-image">
-            <img src={this.props.event.img_url} height="400" width="600"/>
-          </section>
-          <section className="event-info-section">
-            <div className="div-for-ul">
-              <ul className="event-show-ul">
-                <li className="date-li">{this.state[month]}</li>
-                <li className="day-li">{day}</li>
-                <li className="title-li">{this.props.event.title}</li>
-                <li className="author-li">By {this.props.author.first_name + " " + this.props.author.last_name}</li>
-                <li className="price-li"><h3>${this.props.event.price}</h3></li>
-              </ul>
-            </div>
-          </section>
+          <img src={this.props.event.img_url} height="400" width="600"/>
+          <div className="div-for-ul">
+            <ul className="event-show-ul">
+              <li className="date-li">{this.state[month]}</li>
+              <li className="day-li">{day}</li>
+              <li className="title-li">{this.props.event.title}</li>
+              <li className="author-li">By {this.props.author.first_name + " " + this.props.author.last_name}</li>
+              <li className="price-li"><h3>${this.props.event.price}</h3></li>
+            </ul>
+          </div>
         </div>
         {this.props.event.address + " " + this.props.event.city + " " + this.props.event.zipcode}
         {this.props.event.description}
+        <h1>Tags</h1>
+        <ul>
+          {this.props.categories.map(category => <li key={category.id}>{category.name}</li>)}
+        </ul>
       </div>
     )
   }

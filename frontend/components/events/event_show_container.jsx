@@ -9,10 +9,12 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
   const id = parseInt(ownProps.match.params.id)
   const author = Object.values(state.entities.authors)[0]
+  const categories = Object.values(state.entities.categories)
   return {
     event: state.entities.events[id],
     id,
-    author
+    author,
+    categories
   }
 }
 

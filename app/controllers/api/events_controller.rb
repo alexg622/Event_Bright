@@ -9,6 +9,9 @@ class Api::EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @categories = @event.categories
+
+    render :show 
   end
 
   def new
