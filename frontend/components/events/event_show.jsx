@@ -25,17 +25,28 @@ componentWillReceiveProps(nextProps){
 
 
   render(){
-    console.log(this.props.id);
-    console.log(this.props.event);
+
     if (this.props.event === undefined){
       return null
     }
+    console.log();
     return(
 
-      <div>
-        {this.props.id}
-        {this.props.event.title}
-        Testing
+      <div className="event-show-div">
+        <section className="event-show-image">
+          <img src={this.props.event.img_url} height="400" width="800"/>
+        </section>
+        <section className="event-info-section">
+          <ul>
+            <li><h3>Date</h3></li>
+            <li>{this.props.event.start_time}-{this.props.event.end_time}</li>
+            <li>{this.props.event.address + " " + this.props.event.city + " " + this.props.event.zipcode}</li>
+            <li>{this.props.event.description}</li>
+            <li>{this.props.event.price}</li>
+            <li>{this.props.author.first_name}</li>
+          </ul>
+        </section>
+
       </div>
     )
   }

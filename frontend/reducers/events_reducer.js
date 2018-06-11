@@ -15,6 +15,8 @@ const eventsReducer = (state = {}, action) => {
       let nextState = merge({}, state)
       delete nextState[action.event.id]
       return nextState
+    case RECEIVE_CATEGORY:
+      return merge({}, action.events)
     default:
       return state
   }
