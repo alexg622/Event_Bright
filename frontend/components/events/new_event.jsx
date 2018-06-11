@@ -14,12 +14,16 @@ class NewEvent extends React.Component {
     this.setState({price: ""})
   }
 
+  componentDidMount(){
+    this.props.fetchCategories();
+  }
+
   update(field){
     return e => this.setState({[field]: e.target.value})
   }
 
   componentWillUnmount(){
-    this.props.clearEventErrors(); 
+    this.props.clearEventErrors();
   }
 
   renderErrors() {
@@ -35,6 +39,9 @@ class NewEvent extends React.Component {
 }
 
   render(){
+    if (this.props.categories === undefined) {
+      return null
+    }
     return(
       <div className="form-div">
         <form className="New-event-form" onSubmit={this.handleSubmit}>
@@ -66,6 +73,11 @@ class NewEvent extends React.Component {
           </label>
           <label>
             <textarea placeholder="Details" value={this.state.details} onChange={this.update("details")}/>
+          </label>
+          <label>Select Category
+          <select id = "myList">
+            {this.props.categories.map(category => <option key={category.id} value ={category.id} onClick={this.update("category")}>{category.name}</option>)}
+          </select>
           </label>
           <input type="submit" value="Create Event!"/>
         </form>
