@@ -2,13 +2,22 @@
 // //   display: flex;
 // //   align-items: center;
 // // }
-// // .Events-index img{
-// //   height: 300px;
-// //   width: 300px;
-// //   display: block;
-// //   width: 33%;
-// // }
-//
+// .Events-index img{
+//   height: 300px;
+//   width: 300px;
+//   display: block;
+//   width: 33%;
+// }
+.event-show-div{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
+}
+.other-info-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 // .center {
 //   align-items: center;
 //   margin: 0 auto;

@@ -44,7 +44,7 @@ handleDelete(e){
 
 deleteButton(){
   if (this.props.session.currentUser !== undefined && this.props.session !== undefined && parseInt(this.props.author.id) === parseInt(this.props.session.currentUser.id)) {
-    return <button key="delete-button" onClick={this.handleDelete}>WHHHAATTT {this.props.author.id}  {this.props.session.currentUser.id} TTTTJTTTJTTTJTTJ</button>
+    return <button key="delete-button" onClick={this.handleDelete}>DELETE EVENT</button>
   }
 }
 
@@ -70,13 +70,15 @@ deleteButton(){
             </ul>
           </div>
         </div>
-        {this.props.event.address + " " + this.props.event.city + " " + this.props.event.zipcode}
-        {this.props.event.description}
-        <h1>Tags</h1>
-        <ul>
-          {this.props.categories.map(category => <li key={category.id}>{category.name}</li>)}
-        </ul>
-        {this.deleteButton()}
+        <div className="other-info-div">
+          {this.props.event.address + " " + this.props.event.city + " " + this.props.event.zipcode}
+          {this.props.event.description}
+          <h1>Tags</h1>
+          <ul>
+            {this.props.categories.map(category => <li key={category.id}>{category.name}</li>)}
+          </ul>
+          {this.deleteButton()}
+        </div>
       </div>
     )
   }

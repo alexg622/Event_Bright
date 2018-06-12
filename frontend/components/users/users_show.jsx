@@ -13,7 +13,8 @@ class UsersShow extends React.Component {
   render() {
     return(
       <div>
-        {this.props.event_tickets.length} 
+        {this.props.event_tickets.length}
+        <h1>Working</h1>
       </div>
     )
   }

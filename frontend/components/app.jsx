@@ -19,7 +19,7 @@ const App = () => (
     <NavBarContainer />
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/users/:id" components={UsersShowContainer} />
+      <Route exact path='/users/:id' component={UsersShowContainer} />
       <ProtectedRoute exact path="/events/new" component={NewEventContainer} />
       <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
       <AuthRoute exact path="/session/new" component={LoginFormContainer} />
