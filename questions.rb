@@ -7,3 +7,5 @@
 # When I click on the show page from the index the console keeps going
 
 # why when I delete an event I have to refresh the page for it to go away
+
+# why do I need to refresh the page for the delete button to show up. 

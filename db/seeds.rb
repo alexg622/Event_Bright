@@ -46,3 +46,7 @@ show = Category.create(name: "Show", img_url: "Test2")
 
 tag1 = Tag.create(event_id: event1.id, category_id: music.id)
 tag2 = Tag.create(event_id: event1.id, category_id: show.id)
+
+ticket1 = Ticket.create(event_id: event1.id, user_id: alex.id)
+ticket2 = Ticket.create(event_id: event2.id, user_id: alex.id)
+ticket3 = Ticket.create(event_id: event3.id, user_id: alex.id)

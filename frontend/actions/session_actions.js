@@ -13,14 +13,6 @@ export const signup = user => dispatch => (
   ))
 );
 
-// ______________________________
-// export const createTodo = todo => dispatch => (
-//   TodoAPIUtil.createTodo(todo)
-//   .then(todo => { dispatch(receiveTodo(todo)); dispatch(clearSessionErrors())},
-//   err => dispatch(receiveErrors(err.responseJSON)))
-// );
-// ______________________________
-
 export const signin = user => dispatch => (
   APIUtil.signin(user).then(user => (
     dispatch(receiveCurrentUser(user))

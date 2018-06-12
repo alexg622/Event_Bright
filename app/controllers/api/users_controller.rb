@@ -12,7 +12,10 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-  end 
+    @event_tickets = @user.event_tickets
+
+    render :show 
+  end
 
   private
   def user_params
