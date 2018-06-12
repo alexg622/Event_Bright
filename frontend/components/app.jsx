@@ -10,14 +10,17 @@ import EventIndexContainer from './events/events_index_container.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import HomePage from './home_page_container.jsx';
 import EventShowContainer from './events/event_show_container.jsx';
+import UpdateEventContainer from './events/update_event_container.jsx';
+
 const App = () => (
   <div>
     <Modal />
     <NavBarContainer />
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <ProtectedRoute exact path="/events/new" component={NewEventContainer} />
       <Route exact path="/events/:id" component={EventShowContainer} />
+      <ProtectedRoute exact path="/events/new" component={NewEventContainer} />
+      <ProtectedRoute exact path="/events/:id/edit" component={UpdateEventContainer} />
      <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
      <AuthRoute exact path="/session/new" component={LoginFormContainer} />
      <Route exact path="/events" component={EventIndexContainer} />

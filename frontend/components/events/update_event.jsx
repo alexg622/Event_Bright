@@ -3,7 +3,23 @@ import React from 'react';
 class UpdateEvent extends React.Component {
   constructor(props){
     super(props)
-    this.state = this.props.event
+    if(this.props.event === undefined) {
+      return null
+    }
+    this.state = {
+      event: {
+        title: this.props.event.title || "",
+        img_url: this.props.event.img_url || "",
+        start_time: this.props.event.start_time || "",
+        end_time: this.props.event.end_time || "",
+        address: this.props.event.address || "",
+        city: this.props.event.city || "",
+        zipcode: this.props.event.zipcode || "",
+        price: this.props.event.price || "",
+        details: this.props.event.details || "",
+        category: 0
+    }
+  }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -15,6 +31,7 @@ class UpdateEvent extends React.Component {
 
   componentDidMount(){
     this.props.fetchCategories();
+    this.props.fetchEvent(parseInt(this.props.match.params.id))
   }
 
   update(field){
@@ -22,9 +39,13 @@ class UpdateEvent extends React.Component {
       this.setState({[field]: e.target.value})
   }
 
-  componentWillReceiveNextProp(nextProps){
+  componentWillReceiveProps(nextProps){
+    if (this.props.event === undefined) {
+      return null
+    }
+
     if (this.props.event.id !== nextProps.match.params.id){
-      this.props.fetchEvent(this.props.match.params.id)
+      this.props.fetchEvent(parseInt(this.props.match.params.id))
     }
   }
 
@@ -48,45 +69,48 @@ class UpdateEvent extends React.Component {
     if (this.props.categories === undefined) {
       return null
     }
-    console.log(this.state.category);
+    if (this.props.event === undefined) {
+      return null
+    }
     return(
       <div className="form-div">
         <form className="New-event-form" onSubmit={this.handleSubmit}>
-          <h1>Create Your Event!</h1>
+          <h1>Update Your Event!</h1>
           <h5 className="Login-form-erros">{this.renderErrors()}</h5>
           <label>
-            <input placeholder="Title" type="text" value={this.state.title} onChange={this.update("title")}/>
+            <input placeholder="Title" type="text" value={this.props.event.title} onChange={this.update("title")}/>
           </label>
           <label>
-            <input placeholder="Image" type="text" value={this.state.img_url} onChange={this.update("img_url")}/>
+            <input placeholder="Image" type="text" value={this.props.event.img_url} onChange={this.update("img_url")}/>
           </label>
           <label>
-            <input placeholder="Start date and Time" type="datetime-local" value={this.state.start_time} onChange={this.update("start_time")}/>
+            <input placeholder="Start date and Time" type="datetime-local" value={this.props.event.start_time} onChange={this.update("start_time")}/>
           </label>
           <label>
-            <input placeholder="End date and Time" type="datetime-local" value={this.state.end_time} onChange={this.update("end_time")}/>
+            <input placeholder="End date and Time" type="datetime-local" value={this.props.event.end_time} onChange={this.update("end_time")}/>
           </label>
           <label>
-            <input placeholder="Address" type="text" value={this.state.address} onChange={this.update("address")}/>
+            <input placeholder="Address" type="text" value={this.props.event.address} onChange={this.update("address")}/>
           </label>
           <label>
-            <input placeholder="City" type="text" value={this.state.city} onChange={this.update("city")}/>
+            <input placeholder="City" type="text" value={this.props.event.city} onChange={this.update("city")}/>
           </label>
           <label>
-            <input placeholder="Zipcode" type="text" value={this.state.zipcode} onChange={this.update("zipcode")}/>
+            <input placeholder="Zipcode" type="text" value={this.props.event.zipcode} onChange={this.update("zipcode")}/>
           </label>
           <label>
-            <input placeholder="Price" type="text" value={this.state.price} onChange={this.update("price")}/>
+            <input placeholder="Price" type="text" value={this.props.event.price} onChange={this.update("price")}/>
           </label>
           <label>
-            <textarea placeholder="Details" value={this.state.details} onChange={this.update("details")}/>
+            <textarea placeholder="Details" value={this.props.event.details} onChange={this.update("details")}/>
           </label>
           <label>Category
-          <select id ="myList" value={this.state.category} onChange={this.update("category")} >
+          <select id ="myList" value={this.props.event.category} onChange={this.update("category")} >
             {this.props.categories.map(category => <option key={category.id} value={category.id} >{category.name}</option>)}
           </select>
           </label>
           <input type="submit" value="Create Event!"/>
+          <input type="submit" value="Update Event!"/>
         </form>
         <footer></footer>
       </div>
