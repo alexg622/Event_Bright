@@ -16,7 +16,7 @@ const App = () => (
     <NavBarContainer />
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/events/new" component={NewEventContainer} />
+      <ProtectedRoute exact path="/events/new" component={NewEventContainer} />
       <Route exact path="/events/:id" component={EventShowContainer} />
      <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
      <AuthRoute exact path="/session/new" component={LoginFormContainer} />

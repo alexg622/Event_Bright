@@ -6,7 +6,7 @@ import NewEvent from './new_event';
 
 const mapStateToProps = state => ({
   event: {title: "", img_url: "", start_time: "", end_time: "",
-  address: "", city: "", zipcode: "", price: "", details: "", category: ""},
+  address: "", city: "", zipcode: "", price: "", details: "", category: 0},
   errors: state.errors.event,
   categories: Object.values(state.entities.categories)
 })

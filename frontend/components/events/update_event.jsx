@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NewEvent extends React.Component {
+class UpdateEvent extends React.Component {
   constructor(props){
     super(props)
     this.state = this.props.event
@@ -10,8 +10,7 @@ class NewEvent extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.setState({["price"]: parseFloat(this.state.price.replace(",","."))})
-    this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.id}`))
-    this.setState({price: ""})
+    this.props.updateEvent(this.state).then(event => this.props.history.push(`/events/${event.id}`))
   }
 
   componentDidMount(){
@@ -21,6 +20,12 @@ class NewEvent extends React.Component {
   update(field){
     return e =>
       this.setState({[field]: e.target.value})
+  }
+
+  componentWillReceiveNextProp(nextProps){
+    if (this.props.event.id !== nextProps.match.params.id){
+      this.props.fetchEvent(this.props.match.params.id)
+    }
   }
 
   componentWillUnmount(){
@@ -89,4 +94,4 @@ class NewEvent extends React.Component {
   }
 }
 
-export default NewEvent;
+export default UpdateEvent;

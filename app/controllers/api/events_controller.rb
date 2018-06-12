@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-  before_action :signed_in?, only: [:create, :update, :destroy]
+  before_action :signed_in?, only: [:create, :new, :update, :destroy]
 
   def index
     @events = Event.all
@@ -11,7 +11,7 @@ class Api::EventsController < ApplicationController
     @event = Event.find(params[:id])
     @categories = @event.categories
 
-    render :show 
+    render :show
   end
 
   def new
@@ -22,7 +22,12 @@ class Api::EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.author = current_user
     if @event.save
-      render :show
+      @tag = Tag.new(event_id: @event.id, category_id: params[:category])
+      if @tag.save
+        render :show
+      else
+        render json: @tag.errors.full_messages, status: 422
+      end
     else
       render json: @event.errors.full_messages, status: 422
     end
