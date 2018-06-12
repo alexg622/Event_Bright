@@ -13,7 +13,7 @@ const eventsReducer = (state = {}, action) => {
       return merge({}, state, action.events)
     case REMOVE_EVENT:
       let nextState = merge({}, state)
-      delete nextState[action.event.id]
+      delete nextState[action.eventId]
       return nextState
     case RECEIVE_CATEGORY:
       return merge({}, action.events)

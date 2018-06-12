@@ -41,7 +41,7 @@ export const updateEvent = (event) => dispatch => (
 // controller isn't sending back anything after destroying event
 export const deleteEvent = (id) => dispatch => (
   APIUtil.deleteEvent(id).then(event => (
-    dispatch(receiveEvent(event))
+    dispatch(removeEvent(event))
   ), err => (
     dispatch(receiveEventErrors(err.responseJSON))
   ))

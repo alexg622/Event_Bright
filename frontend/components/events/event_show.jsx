@@ -18,6 +18,8 @@ class EventShow extends React.Component {
       11: "NOV",
       12: "DEC"
     }
+    this.handleDelete = this.handleDelete.bind(this)
+    this.deleteButton = this.deleteButton.bind(this)
   }
 
 componentDidMount(){
@@ -35,13 +37,23 @@ componentWillReceiveProps(nextProps){
   }
 }
 
+handleDelete(e){
+  e.preventDefault();
+  this.props.deleteEvent(this.props.event.id).then(r => this.props.history.push("/"))
+}
 
+deleteButton(){
+  if (this.props.session.currentUser !== undefined && this.props.session !== undefined && parseInt(this.props.author.id) === parseInt(this.props.session.currentUser.id)) {
+    return <button key="delete-button" onClick={this.handleDelete}>WHHHAATTT {this.props.author.id}  {this.props.session.currentUser.id} TTTTJTTTJTTTJTTJ</button>
+  }
+}
 
 
   render(){
     if (this.props.event === undefined){
       return null
     }
+
     const month = new Date(this.props.event.start_time).getMonth()
     const day = new Date(this.props.event.start_time).getDay()
     return(
@@ -64,6 +76,7 @@ componentWillReceiveProps(nextProps){
         <ul>
           {this.props.categories.map(category => <li key={category.id}>{category.name}</li>)}
         </ul>
+        {this.deleteButton()}
       </div>
     )
   }

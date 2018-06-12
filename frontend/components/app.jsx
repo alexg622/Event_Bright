@@ -18,12 +18,11 @@ const App = () => (
     <NavBarContainer />
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/events/:id" component={EventShowContainer} />
       <ProtectedRoute exact path="/events/new" component={NewEventContainer} />
+      <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
+      <AuthRoute exact path="/session/new" component={LoginFormContainer} />
       <ProtectedRoute exact path="/events/:id/edit" component={UpdateEventContainer} />
-     <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
-     <AuthRoute exact path="/session/new" component={LoginFormContainer} />
-     <Route exact path="/events" component={EventIndexContainer} />
+      <Route exact path="/events/:id" component={EventShowContainer} />
    </Switch>
   </div>
 )

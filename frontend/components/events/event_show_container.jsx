@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { fetchEvent } from '../../actions/event_actions';
+import { fetchEvent, deleteEvent } from '../../actions/event_actions';
 import EventShow from './event_show.jsx';
 import { withRouter } from 'react-router-dom';
 
@@ -14,12 +14,14 @@ const mapStateToProps = (state, ownProps) => {
     event: state.entities.events[id],
     id,
     author,
-    categories
+    categories,
+    session: state.session
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchEvent: id => dispatch(fetchEvent(id))
+  fetchEvent: id => dispatch(fetchEvent(id)),
+  deleteEvent: id => dispatch(deleteEvent(id))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EventShow))
