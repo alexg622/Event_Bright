@@ -12,6 +12,7 @@ import HomePage from './home_page_container.jsx';
 import EventShowContainer from './events/event_show_container.jsx';
 import UpdateEventContainer from './events/update_event_container.jsx';
 import UsersShowContainer from './users/users_show_container';
+import TicketsFormContainer from './tickets/tickets_form_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path='/users/:id' component={UsersShowContainer} />
+      <Route exact path='/events/:eventId/tickets/new' component={TicketsFormContainer}/>
       <ProtectedRoute exact path="/events/new" component={NewEventContainer} />
       <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
       <AuthRoute exact path="/session/new" component={LoginFormContainer} />

@@ -21,6 +21,9 @@ class Event < ApplicationRecord
   validates :title, :img_url, :start_time, :end_time, :address, :city, :zipcode, :price, :details, :user_id, presence: true
   validates :title, uniqueness: true
 
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   belongs_to :author,
     primary_key: :id,
     foreign_key: :user_id,
@@ -33,7 +36,7 @@ class Event < ApplicationRecord
 
   has_many :users,
     through: :tickets,
-    source: :user 
+    source: :user
 
   has_many :tags,
     primary_key: :id,

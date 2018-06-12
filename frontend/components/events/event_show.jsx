@@ -79,6 +79,7 @@ deleteButton(){
           </ul>
           {this.deleteButton()}
         </div>
+        <a onClick={() => this.props.openModal('PurchaseTicket')}>Purchase Ticket</a>
       </div>
     )
   }
