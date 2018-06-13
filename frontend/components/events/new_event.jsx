@@ -69,6 +69,9 @@ class NewEvent extends React.Component {
             <input placeholder="Zipcode" type="text" value={this.state.zipcode} onChange={this.update("zipcode")}/>
           </label>
           <label>
+            <input placeholder="State" type="text" value={this.state.state} onChange={this.update("state")}/>
+          </label>
+          <label>
             <input placeholder="Price" type="text" value={this.state.price} onChange={this.update("price")}/>
           </label>
           <label>

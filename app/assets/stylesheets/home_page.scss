@@ -18,9 +18,12 @@
   flex-wrap: wrap;
   padding-left: 10%;
   padding-right: 10%;
+  width: 90vw;
+  justify-content: space-between;
 }
 .events-div{
   // display: inline-block;
+
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -30,24 +33,38 @@
   background: white;
 }
 .section-one{
-  color:  #45494E;
+  // color:  #45494E;
   font-size: 12px;
   letter-spacing: 1px;
-  padding-top: 2%;
+  padding-top: 4%;
+
+  // color: gb(69, 73, 78);
+
+font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
 }
 .section-two{
   font-size: 15px;
   padding-bottom: 5%;
-  padding-top: 1%;
+  padding-top: 2%;
   color: #282C35;
   font-weight: 600;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  line-height: 19px;
+  max-height: 2.5em;
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
 .section-three{
-  color:  #666A73;
-  font-size: 15px;
-  padding-bottom: 2%;
+  // color:  #666A73;
+  color: gray;
+  font-size: 12px;
+  padding-bottom: 4%;
   letter-spacing: 1px;
+  padding-top: 3%;
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
   // border-bottom: 1px solid lightgray;
 }
 
@@ -56,20 +73,21 @@
   direction: column;
   border-top: 1px solid lightgray;
   justify-content: space-between;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background: white;
 }
 
 .Event-info-div{
-  margin-bottom: 6px;
+  // margin-bottom: 6px;
   overflow: hidden;
   border-left: 1px solid lightgray;
   border-right: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
   // box-shadow: 0px 0px 0px 1px lightgray;
-  -webkit-box-shadow: 0 8px 6px -6px lightgray;
-  -moz-box-shadow: 0 8px 6px -6px lightgray;
-  box-shadow: 0 8px 6px -6px lightgray;
+  // -webkit-box-shadow: 0 8px 6px -6px lightgray;
+  // -moz-box-shadow: 0 8px 6px -6px lightgray;
+  // box-shadow: 0 8px 6px -6px lightgray;
   width: 315px;
 
   // padding-left: 3%;
@@ -77,14 +95,15 @@
 
 .Event-info-div section {
   padding-left: 3%;
-
+  background: white;
 
 }
 
 .div-one{
   color: gray;
   padding-left: 3%;
-  font-size: 15px;
+  font-size: 14px;
+  background: white;
 }
 
 .div-two{
@@ -93,6 +112,10 @@
 
 .div-three{
   padding-right: 3%;
+  background: white;
+}
+.div-three i{
+  background: white;
 }
 .div-one:hover{
   color: #0093D7;
@@ -113,10 +136,18 @@
 
 .events-div {
   // margin: 0 auto;
+  margin-top: 8%;
   padding: 0;
+}
+
+.events-div:hover{
+  transform: translate3d(0,0,0);
+  transition: box-shadow .2s cubic-bezier(0,.2,.4,1);
 }
 
 div {
   padding: 0;
   margin: 0 auto;
 }
+
+// Work on font, hover, and then price

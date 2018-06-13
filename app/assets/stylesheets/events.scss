@@ -8,10 +8,105 @@
 //   display: block;
 //   width: 33%;
 // }
+.main-div{
+  display: flex;
+  flex-direction: column;
+}
 .event-show-div{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 5%;
+  // border-bottom: 1px solid black;
+
+}
+
+.event-show-ul-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+.event-show-div img{
+  height: 30vw;
+  width: 57vw;
+}
+
+// .event-show-div > * {
+//   flex: 1 100%;
+// }
+
+
+.event-show-ul{
+  padding-left: 17%;
+}
+
+.event-title-ul{
+  padding-bottom: 10%;
+  padding-left: 17%;
+}
+
+.event-price-ul{
+  padding-bottom: 5%;
+  padding-left: 17%;
+}
+
+.date-li {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+  color: rgb(102, 106, 115);
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+
+}
+
+.day-li {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+  color: rgb(102, 106, 115);
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+
+}
+
+.title-li {
+overflow: hidden;
+text-overflow: ellipsis;
+color: #282C35;
+font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+font-weight: 600;
+font-size: 25px;
+line-height: 30px;
+letter-spacing: 0.5px;
+word-break: break-word;
+}
+
+.author-li{
+  color: rgb(102, 106, 115);
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+}
+
+.price-li {
+font-size: 15px;
+font-weight: 400;
+height: 22px;
+letter-spacing: 0.5px;
+line-height: 22px;
+color: rgb(102, 106, 115);
+font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+
+}
+
+.div-for-ul{
+  display: flex;
 }
 .other-info-div{
   display: flex;

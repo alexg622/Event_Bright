@@ -87,7 +87,7 @@ class HomePage extends React.Component {
   }
 
   findCategory(){
-    return ["#Music", "#Festival", "#Concert", "#Party", "#Festival #Music", "#Party #Concert", "#Party #Music"][Math.floor((Math.random() * 6) + 0)]
+    return ["#Music", "#Festival", "#Concert", "#Club", "#Dance"][Math.floor((Math.random() * 4) + 0)]
   }
 
   componentDidMount(){
@@ -97,11 +97,11 @@ class HomePage extends React.Component {
   render(){
     return (
       <div className="Events-index">
-        <img className="Nav-bar-image" src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae8584287da6fac5895bbe4fb80f9f5f&auto=format&fit=crop&w=1050&q=80" width="900px" height="400px"/>
+        <img className="Nav-bar-image" src="https://images.unsplash.com/photo-1500021804447-2ca2eaaaabeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=510608b1165db1e48889a8a059dd5d1e&auto=format&fit=crop&w=1050&q=80" width="900px" height="400px"/>
         <div className="center">
           {this.props.events.map(event =>
-            <div className="events-div" key={event.id}>
-              <Link to={`/events/${event.id}`}><img className="event-image" src={event.img_url}/></Link>
+            <Link to={`/events/${event.id}`}><div className="events-div" key={event.id}>
+              <img className="event-image" src={event.img_url}/>
               <div className="Event-info-div">
                 <section className="section-one">{this.state.day[new Date(event.start_time).getDay()] + this.state.month[new Date(event.start_time).getMonth()]
                     + (new Date(event.start_time).getDate())
@@ -111,10 +111,10 @@ class HomePage extends React.Component {
                 <section className="section-three">{event.address + ", " + event.city}</section>
                 <div className="Event-icons">
                   <div className="div-one">{this.findCategory()}</div>
-                  <div className="div-three"><i className="far fa-bookmark 2x"></i></div>
+                  <div className="div-three"><i className="far fa-bookmark fa-lg"></i></div>
                 </div>
               </div>
-            </div>
+            </div></Link>
           )}
         </div>
       </div>

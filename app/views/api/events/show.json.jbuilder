@@ -1,7 +1,7 @@
 json.event do
   json.set! @event.id do
     json.extract! @event, :id, :title, :img_url, :start_time,
-    :end_time, :address, :city, :zipcode, :price, :details,
+    :end_time, :address, :city, :zipcode, :state, :price, :details,
     :user_id
   end
 end
@@ -18,4 +18,4 @@ json.categories do
       json.extract! category, :name, :img_url
     end
   end
-end 
+end

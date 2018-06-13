@@ -7,7 +7,7 @@ end
 json.events do
   @category.events.each do |event|
     json.set! event.id do
-      json.extract! event, :id, :title, :img_url, :start_time,
+      json.extract! event, :id, :state, :title, :img_url, :start_time,
       :end_time, :address, :city, :zipcode, :price, :details,
       :user_id
     end

@@ -2,7 +2,7 @@ json.events do
   @events.each do |event|
     json.set! event.id do
       json.extract! event, :id, :title, :img_url, :start_time,
-      :end_time, :address, :city, :zipcode, :price, :details,
+      :end_time, :address, :city, :state, :zipcode, :price, :details,
       :user_id
     end
   end

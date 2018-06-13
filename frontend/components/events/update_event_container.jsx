@@ -8,9 +8,9 @@ const mapStateToProps = (state, ownProps) => {
 
   const  event = state.entities.events[ownProps.match.params.id]
   const blankEvent = {title: "32434", img_url: "23rew", start_time: new Date(), end_time: new Date(),
-  address: "213213", city: "213123", zipcode: "12323", price: 4545, details: "12323", category: 4}
+  address: "213213", city: "213123", zipcode: "12323", price: 4545, details: "12323", category: 4, state: "CA"}
   return {
-    event: event || blankEvent, 
+    event: event || blankEvent,
     errors: state.errors.event,
     categories: Object.values(state.entities.categories)
   }

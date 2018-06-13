@@ -11,6 +11,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.float :price, null: false
       t.text :details, null: false
       t.integer :user_id, null: false
+      t.text :state, null: false 
 
       t.timestamps
     end

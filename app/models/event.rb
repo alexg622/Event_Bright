@@ -18,7 +18,7 @@
 #
 
 class Event < ApplicationRecord
-  validates :title, :img_url, :start_time, :end_time, :address, :city, :zipcode, :price, :details, :user_id, presence: true
+  validates :title, :img_url, :state, :start_time, :end_time, :address, :city, :zipcode, :price, :details, :user_id, presence: true
   validates :title, uniqueness: true
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

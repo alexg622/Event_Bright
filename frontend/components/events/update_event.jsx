@@ -17,7 +17,8 @@ class UpdateEvent extends React.Component {
         zipcode: this.props.event.zipcode || "",
         price: this.props.event.price || "",
         details: this.props.event.details || "",
-        category: 0
+        category: 0,
+        state: "CA"
     }
   }
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -97,6 +98,9 @@ class UpdateEvent extends React.Component {
           </label>
           <label>
             <input placeholder="Zipcode" type="text" value={this.props.event.zipcode} onChange={this.update("zipcode")}/>
+          </label>
+          <label>
+            <input placeholder="State" type="text" value={this.props.event.state} onChange={this.update("state")}/>
           </label>
           <label>
             <input placeholder="Price" type="text" value={this.props.event.price} onChange={this.update("price")}/>

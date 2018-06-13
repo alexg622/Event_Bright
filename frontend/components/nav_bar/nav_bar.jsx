@@ -32,7 +32,7 @@ class NavBar extends React.Component {
   render(){
     return(
       <div className="nav-bar">
-        <Link className="active" id="event-link" to="/">EventBrite</Link>
+        <Link className="active" id="event-link" to="/">Eventbrite</Link>
         <div className="ul-div">
           <ul className="nav-bar-ul">
             <li key="browse events"><Link to="/">BROWSE EVENTS</Link></li>

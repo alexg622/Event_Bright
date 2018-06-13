@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_06_12_173441) do
     t.float "price", null: false
     t.text "details", null: false
     t.integer "user_id", null: false
+    t.text "state", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar_file_name"
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 2018_06_12_173441) do
   create_table "tickets", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "event_id", null: false
+    t.integer "quantity", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_tickets_on_event_id"
