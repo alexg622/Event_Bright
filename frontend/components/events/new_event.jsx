@@ -9,9 +9,8 @@ class NewEvent extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.setState({["price"]: parseFloat(this.state.price.replace(",","."))})
-    this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.id}`))
-    this.setState({price: ""})
+    // this.setState({["price"]: parseFloat(this.state.price.replace(",","."))})
+    this.props.createEvent(this.state).then(payload => this.props.history.push(`/events/${Object.keys(payload.event)[0]}`))
   }
 
   componentDidMount(){
@@ -43,7 +42,6 @@ class NewEvent extends React.Component {
     if (this.props.categories === undefined) {
       return null
     }
-    console.log(this.state.category);
     return(
       <div className="form-div">
         <form className="New-event-form" onSubmit={this.handleSubmit}>
@@ -77,7 +75,7 @@ class NewEvent extends React.Component {
             <textarea placeholder="Details" value={this.state.details} onChange={this.update("details")}/>
           </label>
           <label>Category
-          <select id ="myList" value={this.state.category} onChange={this.update("category")} >
+          <select id ="myList" value={this.state.category.id} onChange={this.update("category")} >
             {this.props.categories.map(category => <option key={category.id} value={category.id} >{category.name}</option>)}
           </select>
           </label>

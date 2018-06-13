@@ -26,16 +26,16 @@ componentDidMount(){
   this.props.fetchEvent(this.props.id)
 }
 
-componentWillReceiveProps(nextProps){
-
-  if (this.props.event === undefined){
-    return null
-  }
-
-  if (this.props.event.id !== nextProps.match.params.id){
-    this.props.fetchEvent(nextProps.match.params.id)
-  }
-}
+// componentWillReceiveProps(nextProps){
+//
+//   if (this.props.event === undefined){
+//     return null
+//   }
+// 
+//   if (this.props.event.id !== nextProps.match.params.id){
+//     this.props.fetchEvent(nextProps.match.params.id)
+//   }
+// }
 
 handleDelete(e){
   e.preventDefault();

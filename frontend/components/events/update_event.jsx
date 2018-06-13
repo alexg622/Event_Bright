@@ -78,7 +78,7 @@ class UpdateEvent extends React.Component {
           <h1>Update Your Event!</h1>
           <h5 className="Login-form-erros">{this.renderErrors()}</h5>
           <label>
-            <input placeholder="Title" type="text" value={this.props.event.title} onChange={this.update("title")}/>
+            <input placeholder="Title" type="text" value={this.state.event.title} onChange={this.update("title")}/>
           </label>
           <label>
             <input placeholder="Image" type="text" value={this.props.event.img_url} onChange={this.update("img_url")}/>

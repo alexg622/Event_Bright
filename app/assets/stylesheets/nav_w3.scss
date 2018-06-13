@@ -23,19 +23,21 @@
 
 .nav-bar-ul li a {
     display: block;
-    color: #45494E;
+    color: gray;
     text-align: center;
     padding: 18px 16px;
     text-decoration: none;
     font-family: helvetica;
     height: 54px;
+    font-size: 12.5px;
+    border-left: 1px solid #f2f3f6;
 
 }
 
 // float
 .nav-bar-ul{
   padding-right: 10px;
-  display: flex; 
+  display: flex;
 }
 .ul-div{
   display: flex;
@@ -43,12 +45,15 @@
 }
 .nav-bar-ul li button {
   display: block;
-  color: #45494E;
+  color: gray;
   text-align: center;
   padding: 18px 16px;
+  padding-top: 15px;
   text-decoration: none;
   font-family: helvetica;
+  font-size: 12.5px;
   height: 54px;
+  border-left: 1px solid #f2f3f6;
 }
 
 .nav-bar-ul li a:hover:not(.active) {
@@ -76,11 +81,11 @@
 
 .signup-li {
   border-left: 1px solid #f2f3f6;
-  border-right: 1px solid #f2f3f6;
+  // border-right: 1px solid #f2f3f6;
 }
 .nav-bar{
   height: 50px;
-  border-bottom: 1px solid #f2f3f6;
+  // border-bottom: 5px solid #f2f3f6;
 }
 .login-li{
   border-left: 1px solid #f2f3f6;
@@ -90,6 +95,8 @@
   color: darkorange;
   list-style: none;
   font-size: 23px;
+  border-right: 1px solid #f2f3f6;
+
 }
 
 ul{

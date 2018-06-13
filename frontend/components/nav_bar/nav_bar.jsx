@@ -16,14 +16,14 @@ class NavBar extends React.Component {
   showLinks(){
     if (this.props.session.currentUser){
       return [
-        <li key="logout"><button className="logout-button" onClick={this.signout}>Log Out</button></li>,
+        <li key="logout"><button className="logout-button" onClick={this.signout}>SIGN OUT</button></li>,
         // <li key="my-events" className="my-events-li"><Link to="/">My Events</Link></li>,
-        <li key="create-event" className="new-events-li"><Link to="/events/new">Create Event</Link></li>
+        <li key="create-event" className="new-events-li"><Link to="/events/new">CREATE EVENT</Link></li>
       ]
     } else {
       return [
-        <li key="signup" className="signup-li"><a onClick={() => this.props.openModal('signup')}>SignUp</a></li>,
-        <li key="login" className="login-li"><a onClick={() => this.props.openModal('login')}>Log In</a></li>
+        <li key="signup" className="signup-li"><a onClick={() => this.props.openModal('signup')}>SIGN UP</a></li>,
+        <li key="login" className="login-li"><a onClick={() => this.props.openModal('login')}>SIGN IN</a></li>
         // <li className="login-li" key="login"><Link to='/session/new'>Log In</Link></li>
       ];
     }
@@ -35,7 +35,7 @@ class NavBar extends React.Component {
         <Link className="active" id="event-link" to="/">EventBrite</Link>
         <div className="ul-div">
           <ul className="nav-bar-ul">
-            <li key="browse events"><Link to="/">Browse Events</Link></li>
+            <li key="browse events"><Link to="/">BROWSE EVENTS</Link></li>
             {this.showLinks()}
           </ul>
       </div>
