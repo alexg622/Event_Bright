@@ -11,7 +11,7 @@ Tag.destroy_all
 Category.destroy_all
 
 alex = User.create(first_name: "Alex", last_name: "Gonzalez", email: "alex@mail.com", password: "password")
-
+demoUser = User.create(first_name: "demoUser", last_name: "demoUser", email: "demoUser@demo.com", password: "demoUser")
 
 event1 = Event.create(state: "CA", title: "Fireworks At a Concert", img_url: "https://images.unsplash.com/photo-1505842465776-3b4953ca4f44?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9389a98991d821a1ad3fd297c2a8df36&auto=format&fit=crop&w=500&q=60", start_time: DateTime.now,
 end_time: DateTime.now, address: "715 Folsom", city: "San Francisco",

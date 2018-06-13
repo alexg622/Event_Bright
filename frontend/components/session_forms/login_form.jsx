@@ -9,10 +9,17 @@ class LoginForm extends React.Component {
       password: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDemoSubmit = this.handleDemoSubmit.bind(this)
   }
 
   componentWillUnmount(){
-    this.props.clearSessionErrors(); 
+    this.props.clearSessionErrors();
+  }
+
+  handleDemoSubmit(e){
+    e.preventDefault();
+    const user = Object.assign({}, {email: "demoUser@demo.com", password: "demoUser"})
+    this.props.signin(user).then(success => this.props.closeModal());
   }
 
   // handleSubmit(e){
@@ -56,6 +63,7 @@ class LoginForm extends React.Component {
             <input type="password" placeholder="password" value={this.state.password} onChange={this.update("password")}/>
           </label>
           <input type="submit" value={this.props.formType}/>
+          <input type="submit" value="Demo Login" onClick={this.handleDemoSubmit}/>
         </form>
       </div>
     )
