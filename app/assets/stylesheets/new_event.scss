@@ -20,6 +20,22 @@
   // box-sizing: border-box;
   background: white;
 }
+
+.New-event-form select{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  // display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  // box-sizing: border-box;
+  background: white;
+  box-shadow: none;
+  height: 5%;
+  text-align: center;
+  font-size: 14px; 
+}
+
 .New-event-form textarea{
   width: 90%;
   padding: 12px 20px;
@@ -29,6 +45,7 @@
   border-radius: 10px;
   // box-sizing: border-box;
   background: white;
+
 }
 // .New-event-form input:active {
 //   border: 1px solid blue;

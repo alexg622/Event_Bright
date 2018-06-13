@@ -51,7 +51,7 @@ class NewEvent extends React.Component {
             <input placeholder="Title" type="text" value={this.state.title} onChange={this.update("title")}/>
           </label>
           <label>
-            <input placeholder="Image" type="text" value={this.state.img_url} onChange={this.update("img_url")}/>
+            <input placeholder="Image Url" type="text" value={this.state.img_url} onChange={this.update("img_url")}/>
           </label>
           <label>
             <input placeholder="Start date and Time" type="datetime-local" value={this.state.start_time} onChange={this.update("start_time")}/>
@@ -77,9 +77,9 @@ class NewEvent extends React.Component {
           <label>
             <textarea placeholder="Details" value={this.state.details} onChange={this.update("details")}/>
           </label>
-          <label>Category
-          <select id ="myList" value={this.state.category.id} onChange={this.update("category")} >
-            {this.props.categories.map(category => <option key={category.id} value={category.id} >{category.name}</option>)}
+          <label>
+          <select id ="myList" value={this.state.category.id} onClick={this.update("category")}>
+            {this.props.categories.map(category => <option key={category.id} value={category.id} >Select Category - {category.name}</option>)}
           </select>
           </label>
           <input type="submit" value="Create Event!"/>

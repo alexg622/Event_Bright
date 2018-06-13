@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { createTicket } from '../../actions/ticket_actions.js';
-import TicketsFrom from './tickets_form.jsx';
+import TicketsForm from './tickets_form.jsx';
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -11,4 +11,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapDispatchToProps)(TicketsFrom)
+export default connect(mapDispatchToProps)(TicketsForm)

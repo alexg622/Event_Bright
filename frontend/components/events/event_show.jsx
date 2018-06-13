@@ -127,7 +127,7 @@ deleteButton(){
           <img src={this.props.event.img_url} height="400" width="600"/>
           <div className="event-show-ul-div">
             <ul className="event-show-ul">
-              <li className="date-li">{this.state[month]}</li>
+              <li className="date-li">{this.state.month[month]}</li>
               <li className="day-li">{day}</li>
             </ul>
             <ul className="event-title-ul">
@@ -143,7 +143,7 @@ deleteButton(){
           <div className="other-info-div">
             <div className="description-div">
               <h1>Description</h1>
-              <p>{this.props.event.description}</p>
+              <p>{this.props.event.details}</p>
             </div>
             <div className="date-time-div">
               <h1>Date and Time</h1>
@@ -155,7 +155,7 @@ deleteButton(){
             <div className="location-div">
               <h1>Location</h1>
               <section className="address">{this.props.event.address}</section>
-              <section className="city-state">{this.props.event.address}</section>
+              <section className="city-state">{this.props.event.city + ", " + this.props.event.state + " " + this.props.event.zipcode}</section>
             </div>
           </div>
           <h1>Tags</h1>

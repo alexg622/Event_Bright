@@ -20,6 +20,21 @@
 
 }
 
+.other-info-div{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
+.description-div{
+  margin-right: 28%;
+}
+
+.date-time-div{
+  margin-right: 20%; 
+}
+
+
 .event-show-ul-div {
   display: flex;
   flex-direction: column;
@@ -108,11 +123,7 @@ font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,
 .div-for-ul{
   display: flex;
 }
-.other-info-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 // .center {
 //   align-items: center;
 //   margin: 0 auto;

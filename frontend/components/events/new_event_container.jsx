@@ -5,8 +5,8 @@ import { fetchCategories } from '../../actions/category_actions';
 import NewEvent from './new_event';
 
 const mapStateToProps = state => ({
-  event: {title: "32434", img_url: "23rew", start_time: new Date(), end_time: new Date(),
-  address: "213213", city: "213123", zipcode: "12323", price: 4545, details: "12323", category: 4, state: "CA"}, 
+  event: {title: "", img_url: "", start_time: "", end_time: "",
+  address: "", city: "", zipcode: "", price: 0, details: "", category: 0, state: ""}, 
   errors: state.errors.event,
   categories: Object.values(state.entities.categories)
 })
