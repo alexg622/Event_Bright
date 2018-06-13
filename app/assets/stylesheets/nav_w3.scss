@@ -41,9 +41,18 @@
 
 }
 
+#create-event{
+  color: #0093D7;
+}
+
+#create-event:hover{
+  background: white;
+  color: black;
+}
+
 // float
 .nav-bar-ul{
-  padding-right: 10px;
+  margin-right: 3px;
   display: flex;
 }
 .ul-div{
@@ -61,7 +70,7 @@
   font-size: 12.5px;
   height: 54px;
   border-left: 1px solid #f2f3f6;
-  background: white; 
+  background: white;
 }
 
 .nav-bar-ul li a:hover:not(.active) {
@@ -100,7 +109,8 @@
   // border-right: 1px solid #f2f3f6;
 }
 .nav-bar{
-  height: 50px;
+  height: 55px;
+  width: 100%;
   // border-bottom: 5px solid #f2f3f6;
 }
 .login-li{

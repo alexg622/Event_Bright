@@ -18,7 +18,7 @@ class NavBar extends React.Component {
       return [
         <li key="logout"><button className="logout-button" onClick={this.signout}>SIGN OUT</button></li>,
         // <li key="my-events" className="my-events-li"><Link to="/">My Events</Link></li>,
-        <li key="create-event" className="new-events-li"><Link to="/events/new">CREATE EVENT</Link></li>
+        <li key="create-event" className="new-events-li"><Link id="create-event" to="/events/new">CREATE EVENT</Link></li>
       ]
     } else {
       return [
