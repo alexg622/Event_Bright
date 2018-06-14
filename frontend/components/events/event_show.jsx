@@ -122,54 +122,54 @@ deleteButton(){
     const month = new Date(this.props.event.start_time).getMonth()
     const day = new Date(this.props.event.start_time).getDay()
     return(
-      <div className="main-div">
-        <div className="container">
-          <div className="event-show-div">
-            <img src={this.props.event.img_url} height="400" width="600"/>
-            <div className="event-show-ul-div">
-              <ul className="event-show-ul">
-                <li className="date-li">{this.state.month[month]}</li>
-                <li className="day-li">{day}</li>
-              </ul>
-              <ul className="event-title-ul">
-                <li className="title-li">{this.props.event.title}</li>
-                <li className="author-li">By {this.props.author.first_name + " " + this.props.author.last_name}</li>
-              </ul>
-              <ul className="event-price-ul">
-                <li className="price-li"><h3>${this.props.event.price}</h3></li>
-              </ul>
-            </div>
-          </div>
-          <div className="purchase-ticket-div">
-            <section className="bookmark"><i className="far fa-bookmark fa-lg"></i></section>
-          <input className="ticket-input" type="submit" value="Tickets"/>
-          </div>
-          <div>
-            <div className="other-info-div">
-              <div className="description-div">
-                <h1>Description</h1>
-                <p>{this.props.event.details}</p>
-              </div>
-              <div className="date-time-div">
-                <div className="bottom-info-div">
-                  <h1>Date and Time</h1>
-                  <section className="date-section">{this.state.day[new Date(this.props.event.start_time).getDay()] + this.state.month[new Date(this.props.event.start_time).getMonth()]
-                      + (new Date(this.props.event.start_time).getDate()) + ", " + (new Date(this.props.event.start_time).getYear())}</section>
-                    <section className="time-section">{this.state.hour[new Date(this.props.event.start_time).getHours()] + (new Date(this.props.event.start_time).getMinutes())
-                  + this.state.counter[new Date(this.props.event.start_time).getHours()]}</section>
-                  <h1>Location</h1>
-                  <section className="address">{this.props.event.address}</section>
-                  <section className="city-state">{this.props.event.city + ", " + this.props.event.state + " " + this.props.event.zipcode}</section>
-                </div>
-              </div>
-            </div>
-            <h1>Tags</h1>
-            <ul>
-              {this.props.categories.map(category => <li key={category.id}>{category.name}</li>)}
-            </ul>
-            {this.deleteButton()}
-          </div>
+      <div className="event-show-page">
+        <div className="event-show-background-image-container">
+          <img src={this.props.event.img_url} className="event-show-background-image" />
         </div>
+        <div className="event-show-popup">
+          <div className="event-show-popup-header-container">
+            <img src={this.props.event.img_url} className="event-show-image"/>
+              <div className='event-show-title-date'>
+              <div className="event-show-mon">{this.state.month[new Date(this.props.event.start_time).getMonth()]}</div>
+              <div className="event-show-date">{(new Date(this.props.event.start_time).getDate())}</div>
+              <div className='event-show-title'>{this.props.event.title}</div>
+              <div className="event-show-author">by {this.props.author.first_name + " " + this.props.author.last_name}</div>
+              <div className="price-div">
+                <div className='price'>$20 - ${this.props.event.price}</div>
+            </div>
+            </div>
+          </div>
+            <div className="show-divider">
+              <section className="bookmark"><i className="far fa-bookmark fa-lg"></i></section>
+              <input className="ticket-input" type="submit" value="Tickets"/>
+            </div>
+
+            <div className='event-details'>
+              <div className='event-show-description'>
+                <div className='event-description-header'>DESCRIPTION</div>
+                <div className='event-description'>{this.props.event.details}</div>
+                <br/>
+                <br/>
+                <br/>
+                <div className='event-description-header'>TAGS</div>
+                <br/>
+                <br/>
+                <div className="tags">
+                  {this.props.categories.map(category => <div className="tag-name" key={category.id}>{category.name}</div>)}
+                </div>
+                </div>
+              <div className='event-location-time'>
+                <div className='event-show-logistic-header'>Date and Time</div>
+                <div className='event-show-start-time'>{"11PM-2AM"}</div>
+                <div className="event-show-logistic-header">LOCATION</div>
+                <div className='event-show-location'>{this.props.event.city}</div>
+              </div>
+            </div>
+
+
+        </div>
+
+
       </div>
     )
   }

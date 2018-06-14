@@ -1,273 +1,278 @@
-// // .Events-index {
-// //   display: flex;
-// //   align-items: center;
+// // // .Events-index {
+// // //   display: flex;
+// // //   align-items: center;
+// // // }
+// // .Events-index img{
+// //   height: 300px;
+// //   width: 300px;
+// //   display: block;
+// //   width: 33%;
 // // }
-// .Events-index img{
-//   height: 300px;
-//   width: 300px;
-//   display: block;
-//   width: 33%;
-// }
-.main-div{
-  display: flex;
-  flex-direction: column;
-  background: white;
-}
-.event-show-div{
-  display: flex;
-  justify-content: space-around;
-  padding-right: 5%;
-  margin-top: auto;
-  margin-bottom: auto;
-  border-right: 1px solid black;
-  width: 1155px;
-  // border-bottom: 1px solid black;
-
-}
-
-.logout-button{
-  cursor: pointer;
-}
-.description-div h1{
-  color: #282C35;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.date-time-div h1{
-  color: #282C35;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.location-div h1{
-  color: #282C35;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.ticket-input{
-  width: 28%;
-  // height: 20%;
-  // margin: 8px 0;
-  // display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  // box-sizing: border-box;
-  // background: white;
-
-  text-align: center;
-  background-color: #19AA4A;
-  color: white;
-  // padding: 14px 20px;
-  // margin: 8px 0;
-  // border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 20px;
-  transition: 300ms linear;
-  padding-top: 1%;
-  padding-bottom: 1%
-  // margin-bottom: 1%;
-}
-
-.ticket-input:hover{
-  background-color: #05451E;
-}
-
-.other-info-div{
-  display: flex;
-  justify-content: space-around;
-  padding-top: 5%;
-}
-
-.description-div{
-  margin-right: 28%;
-}
-
-.date-time-div{
-  display: flex;
-  flex-direction: row;
-  margin-right: 20%;
-}
-
-.bottom-info-div{
-  display: flex;
-  flex-direction: row;
-}
-
-
-.event-show-ul-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-
-.event-show-div img{
-  height: 30vw;
-  width: 57vw;
-}
-
-// .event-show-div > * {
-//   flex: 1 100%;
-// }
-
-
-.event-show-ul{
-  padding-left: 17%;
-}
-
-.event-title-ul{
-  padding-bottom: 10%;
-  padding-left: 17%;
-}
-
-.event-price-ul{
-  padding-bottom: 5%;
-  padding-left: 17%;
-}
-
-.date-li {
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.25em;
-  letter-spacing: 1px;
-  color: rgb(102, 106, 115);
-  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-
-
-}
-
-.day-li {
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.25em;
-  letter-spacing: 1px;
-  color: rgb(102, 106, 115);
-  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-
-
-}
-
-.title-li {
-overflow: hidden;
-text-overflow: ellipsis;
-color: #282C35;
-font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-
-font-weight: 600;
-font-size: 25px;
-line-height: 30px;
-letter-spacing: 0.5px;
-word-break: break-word;
-margin-top: 16%;
-}
-
-.author-li{
-  color: rgb(102, 106, 115);
-  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-  margin-top: 8%;
-  margin-bottom: 30%;
-}
-.description-div p {
-  margin-top: 5%;
-}
-
-.other-info-div {
-  background: white;
-  border-top: 1px solid black;
-  margin-top: 1%;
-}
-
-.purchase-ticket-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  // border-bottom: 1px solid black;
-  width: 1120px;
-  // margin-right: 3%;
-  margin-top: 1%;
-  // margin-top: 2%;
-  background: white;
-}
-.price-li {
-font-size: 15px;
-font-weight: 400;
-height: 22px;
-letter-spacing: 0.5px;
-line-height: 22px;
-color: rgb(102, 106, 115);
-font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-margin-top: 100%;
-
-}
-
-.bookmark{
-  margin-right: 69%;
-  margin-top: 1%;
-  margin-left: 4%;
-}
-
-.div-for-ul{
-  display: flex;
-}
-
-// .center {
-//   align-items: center;
-//   margin: 0 auto;
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding-left: 10%;
-//   padding-right: 10%;
-// }
-// .events-div{
-//   // display: inline-block;
+// .main-div{
 //   display: flex;
 //   flex-direction: column;
-//   width: 30%;
-//   margin: 10px;
+//   // background: white;
 // }
-// .section-one{
-//   color:  #666A73;
-//   font-size: 15px;
-//   padding-top: 2%;
+//ticket-input
+// .container {
+//   width: 50vw;
+//   background: white;
 // }
-// .section-two{
-//   font-size: 25px;
-//   padding-bottom: 5%;
-//   padding-top: 1%;
+// .event-show-div{
+//   display: flex;
+//   justify-content: space-around;
+//   padding-right: 5%;
+//   margin-top: auto;
+//   margin-bottom: auto;
+//   border-right: 1px solid black;
+//   // width: 1155px;
+//   // border-bottom: 1px solid black;
+//
+// }
+//
+// .logout-button{
+//   cursor: pointer;
+// }
+// .description-div h1{
 //   color: #282C35;
-// }
-//
-// .section-three{
-//   color:  #666A73;
 //   font-size: 15px;
-//   padding-bottom: 2%;
+//   font-weight: 600;
+// }
+//
+// .date-time-div h1{
+//   color: #282C35;
+//   font-size: 15px;
+//   font-weight: 600;
+// }
+//
+// .location-div h1{
+//   color: #282C35;
+//   font-size: 15px;
+//   font-weight: 600;
+// }
+//
+// .ticket-input{
+//   width: 28%;
+//   // height: 20%;
+//   // margin: 8px 0;
+//   // display: inline-block;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   // box-sizing: border-box;
+//   // background: white;
+//hover
+//   text-align: center;
+//   background-color: #19AA4A;
+//   color: white;
+//   // padding: 14px 20px;
+//   // margin: 8px 0;
+//   // border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   font-size: 20px;
+//   transition: 300ms linear;
+//   padding-top: 1%;
+//   padding-bottom: 1%
+//   // margin-bottom: 1%;
+// }
+//
+// .ticket-input:hover{
+//   background-color: #05451E;
+// }
+//
+// .other-info-div{
+//   display: flex;
+//   justify-content: space-around;
+//   padding-top: 5%;
+// }
+//
+// .description-div{
+//   margin-right: 28%;
+// }
+//
+// .date-time-div{
+//   display: flex;
+//   flex-direction: row;
+//   margin-right: 20%;
+// }
+//
+// .bottom-info-div{
+//   display: flex;
+//   flex-direction: column;
 // }
 //
 //
-// .Event-info-div{
-//   margin-bottom: 6px;
-//   overflow: hidden;
-//   border-left: 1px solid lightgray;
-//   border-right: 1px solid lightgray;
-//   border-bottom: 1px solid lightgray;
+// .event-show-ul-div {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   margin-top: auto;
+//   margin-bottom: auto;
 // }
 //
-// .events-div img{
-//   height: 300px;
-//   width: 100%;
+//
+// .event-show-div img{
+//   height: 30vw;
+//   width: 57vw;
 // }
 //
-// .events-div {
-//   // margin: 0 auto;
-//   padding: 0;
+// // .event-show-div > * {
+// //   flex: 1 100%;
+// // }
+//
+//
+// .event-show-ul{
+//   padding-left: 17%;
 // }
 //
-// div {
-//   padding: 0;
-//   margin: 0 auto;
+// .event-title-ul{
+//   padding-bottom: 10%;
+//   padding-left: 17%;
 // }
+//
+// .event-price-ul{
+//   padding-bottom: 5%;
+//   padding-left: 17%;
+// }
+//
+// .date-li {
+//   font-size: 20px;
+//   font-weight: normal;
+//   line-height: 1.25em;
+//   letter-spacing: 1px;
+//   color: rgb(102, 106, 115);
+//   font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+//
+//
+// }
+//
+// .day-li {
+//   font-size: 20px;
+//   font-weight: normal;
+//   line-height: 1.25em;
+//   letter-spacing: 1px;
+//   color: rgb(102, 106, 115);
+//   font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+//
+//
+// }
+//
+// .title-li {
+// overflow: hidden;
+// text-overflow: ellipsis;
+// color: #282C35;
+// font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+//
+// font-weight: 600;
+// font-size: 25px;
+// line-height: 30px;
+// letter-spacing: 0.5px;
+// word-break: break-word;
+// margin-top: 16%;
+// }
+//
+// .author-li{
+//   color: rgb(102, 106, 115);
+//   font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+//   margin-top: 8%;
+//   margin-bottom: 30%;
+// }
+// .description-div p {
+//   margin-top: 5%;
+// }
+//
+// .other-info-div {
+//   background: white;
+//   border-top: 1px solid black;
+//   margin-top: 1%;
+// }
+//
+// .purchase-ticket-div {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   // border-bottom: 1px solid black;
+//   // width: 1120px;
+//   // margin-right: 3%;
+//   margin-top: 1%;
+//   // margin-top: 2%;
+//   background: white;
+// }
+// .price-li {
+// font-size: 15px;
+// font-weight: 400;
+// height: 22px;
+// letter-spacing: 0.5px;
+// line-height: 22px;
+// color: rgb(102, 106, 115);
+// font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+// margin-top: 100%;
+//
+// }
+//
+// .bookmark{
+//   margin-right: 69%;
+//   margin-top: 1%;
+//   margin-left: 4%;
+// }
+//
+// .div-for-ul{
+//   display: flex;
+// }
+//
+// // .center {
+// //   align-items: center;
+// //   margin: 0 auto;
+// //   display: flex;
+// //   flex-wrap: wrap;
+// //   padding-left: 10%;
+// //   padding-right: 10%;
+// // }
+// // .events-div{
+// //   // display: inline-block;
+// //   display: flex;
+// //   flex-direction: column;
+// //   width: 30%;
+// //   margin: 10px;
+// // }
+// // .section-one{
+// //   color:  #666A73;
+// //   font-size: 15px;
+// //   padding-top: 2%;
+// // }
+// // .section-two{
+// //   font-size: 25px;
+// //   padding-bottom: 5%;
+// //   padding-top: 1%;
+// //   color: #282C35;
+// // }
+// //
+// // .section-three{
+// //   color:  #666A73;
+// //   font-size: 15px;
+// //   padding-bottom: 2%;
+// // }
+// //
+// //
+// // .Event-info-div{
+// //   margin-bottom: 6px;
+// //   overflow: hidden;
+// //   border-left: 1px solid lightgray;
+// //   border-right: 1px solid lightgray;
+// //   border-bottom: 1px solid lightgray;
+// // }
+// //
+// // .events-div img{
+// //   height: 300px;
+// //   width: 100%;
+// // }
+// //
+// // .events-div {
+// //   // margin: 0 auto;
+// //   padding: 0;
+// // }
+// //
+// // div {
+// //   padding: 0;
+// //   margin: 0 auto;
+// // }
