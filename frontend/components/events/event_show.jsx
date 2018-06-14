@@ -128,7 +128,9 @@ deleteButton(){
         </div>
         <div className="event-show-popup">
           <div className="event-show-popup-header-container">
-            <img src={this.props.event.img_url} className="event-show-image"/>
+            <div className="event-show-image">
+              <img src={this.props.event.img_url} className="event-show-img"/>
+            </div>
               <div className='event-show-title-date'>
               <div className="event-show-mon">{this.state.month[new Date(this.props.event.start_time).getMonth()]}</div>
               <div className="event-show-date">{(new Date(this.props.event.start_time).getDate())}</div>
@@ -160,9 +162,13 @@ deleteButton(){
                 </div>
               <div className='event-location-time'>
                 <div className='event-show-logistic-header'>Date and Time</div>
-                <div className='event-show-start-time'>{"11PM-2AM"}</div>
+                <div className='event-show-start-time'>{"Mon, June 18 2018"}</div>
+                <div className='event-show-start-time'>{"6:00 PM-2:00 AM PDT"}</div>
+                <div className='add-calendar'>Add to Calendar</div>
                 <div className="event-show-logistic-header">LOCATION</div>
-                <div className='event-show-location'>{this.props.event.city}</div>
+                <div className='event-show-location'>{this.props.event.address}</div>
+                <div className='event-show-location'>{this.props.event.city + ", " + this.props.event.state + " " + this.props.event.zipcode}</div>
+                <div className='view-map'>View Map</div>
               </div>
             </div>
 
