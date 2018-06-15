@@ -17,7 +17,7 @@ class UpdateEvent extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log(this.state.event.price);
+    // console.log(this.state.event.price);
     // this.setState({["price"]: parseFloat(this.state.event.price.replace(",","."))})
     this.props.updateEvent(this.state.event).then(event => this.props.history.push(`/events/${event.id}`))
   }

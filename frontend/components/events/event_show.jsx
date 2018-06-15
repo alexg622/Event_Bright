@@ -163,7 +163,7 @@ fetcheTheCategories(){
                 <br/>
                 <br/>
                 <div className="tags">
-                  <Link className="tag-name" key={this.props.categories[0].id} to={`/categories/${this.props.categories[0].id}`}>{this.props.categories[0].name}</Link>
+                  {this.props.categories.map(category => <Link className="tag-name" key={category.id} to={`/categories/${category.id}`}>{category.name}</Link>)}
                 </div>
                 </div>
               <div className='event-location-time'>
