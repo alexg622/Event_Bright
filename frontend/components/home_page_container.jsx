@@ -6,7 +6,7 @@ import HomePage from './home_page';
 
 const mapStateToProps = state => ({
   events: Object.values(state.entities.events),
-  categories: Object.values(state.entities.categories)
+  categories: state.entities.categories
 })
 
 const mapDispatchToProps = dispatch => ({

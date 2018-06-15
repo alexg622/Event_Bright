@@ -21,7 +21,7 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.author = current_user
-    if @event.save!
+    if @event.save
       @tag = Tag.new(event_id: @event.id, category_id: category_params[:category])
       if @tag.save
         @categories = @event.categories
@@ -40,8 +40,9 @@ class Api::EventsController < ApplicationController
 
   def update
     @event = current_user.events.find(params[:id])
+    @categories = @event.categories
     if @event.update(event_params)
-      render json: @event 
+      render :show
     else
       render json: @event.errors.full_messages, status: 422
     end
@@ -61,5 +62,9 @@ class Api::EventsController < ApplicationController
 
   def category_params
     params.require(:event).permit(:category)
+  end
+
+  def update_params
+    params.require(:event).permit(:id, :user_id, :category)
   end
 end

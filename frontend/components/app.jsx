@@ -31,6 +31,7 @@ const App = () => (
       <Route exact path='/categories/:id' component={CategoriesShowContainer}/>
       <Route exact path='/categories' component={CategoriesIndexContainer}/>
       <Route exact path="/events/:id" component={EventShowContainer} />
+      <Route path='/' component={HomePage} /> 
    </Switch>
   </div>
 )

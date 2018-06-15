@@ -87,13 +87,23 @@ class HomePage extends React.Component {
   }
 
   findCategory(){
-    return ["#Music", "#Festival", "#Concert", "#Club", "#Dance"][Math.floor((Math.random() * 4) + 0)]
+    return ["#Music", "#Festival", "#Concert", "#Club", "#Dance", "#Explore, #Adventure", "#Dance #Bar"][Math.floor((Math.random() * 7) + 0)]
   }
 
   componentDidMount(){
     this.props.fetchEvents();
     this.props.fetchCategories()
   }
+
+  componentWillReceiveProps(nextProps){
+    if (this.props.match.params.id !== nextProps.match.params.id) {
+      this.props.fetchEvents();
+      this.props.fetchCategories();
+    }
+  }
+  // <div className="categories-iteration">
+  //   {event.category_ids.map(category_id => <div key={`div-${category_id}`} className="div-one">#{this.props.categories[category_id].name}</div>)}
+  // </div>
 
   render(){
     return (
@@ -111,17 +121,15 @@ class HomePage extends React.Component {
                 <section className="section-two">{event.title}</section>
                 <section className="section-three">{event.address + ", " + event.city}</section>
                 <div className="Event-icons">
+                  
                   <div className="div-one">{this.findCategory()}</div>
-                  <div className="div-three"><i className="far fa-bookmark fa-lg"></i></div>
+
+                <div className="div-three"><i className="far fa-bookmark fa-lg"></i></div>
                 </div>
               </div>
             </div></Link>
           )}
         </div>
-
-
-
-
       </div>
     )
   }

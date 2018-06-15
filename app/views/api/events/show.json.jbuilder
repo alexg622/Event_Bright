@@ -19,3 +19,11 @@ json.categories do
     end
   end
 end
+
+json.tags do
+  @event.tags.each do |tag|
+    json.set! tag.id do
+      json.extract! tag, :event_id, :category_id, :id
+    end
+  end
+end

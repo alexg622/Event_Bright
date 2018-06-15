@@ -7,7 +7,6 @@ const authorsReducer = (state = {}, action) => {
     case RECEIVE_ALL_EVENTS:
       return merge({}, state, action.authors)
     case RECEIVE_EVENT:
-      // debugger
       return merge({}, state, action.author)
     default:
       return state

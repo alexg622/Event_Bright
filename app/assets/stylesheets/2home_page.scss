@@ -22,6 +22,15 @@
   width: 90vw;
   justify-content: space-between;
 }
+
+.categories-iteration{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2%;
+
+}
+
+
 .events-div{
   // display: inline-block;
 
@@ -38,6 +47,7 @@
   font-size: 12px;
   letter-spacing: 1px;
   padding-top: 4%;
+  color: gray;
 
   // color: gb(69, 73, 78);
 
@@ -105,6 +115,8 @@ font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,
   padding-left: 3%;
   font-size: 14px;
   background: white;
+  margin-left: 2%;
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
 .div-two{

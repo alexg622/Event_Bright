@@ -3,7 +3,7 @@ json.events do
     json.set! event.id do
       json.extract! event, :id, :title, :img_url, :start_time,
       :end_time, :address, :city, :state, :zipcode, :price, :details,
-      :user_id
+      :user_id, :category_ids 
     end
   end
 end

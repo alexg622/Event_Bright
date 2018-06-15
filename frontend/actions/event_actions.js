@@ -57,7 +57,8 @@ const receiveEvent = payload => ({
   type: RECEIVE_EVENT,
   event: payload.event,
   author: payload.author,
-  categories: payload.categories
+  categories: payload.categories,
+  tags: payload.tags
 })
 
 const removeEvent = event => ({

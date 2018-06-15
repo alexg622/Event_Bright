@@ -10,8 +10,7 @@ const categoriesReducer = (state = {}, action) => {
     case RECEIVE_CATEGORY:
       return Object.assign({}, state, action.category)
     case RECEIVE_EVENT:
-      // debugger
-      return merge({}, state, action.categories)
+      return merge({}, action.categories)
     default:
       return state
   }

@@ -8,6 +8,6 @@ class CreateBookmarks < ActiveRecord::Migration[5.2]
     end
     add_index :bookmarks, :user_id
     add_index :bookmarks, :event_id
-    add_index :bookmarks, [:user_id, :event_id], unique: true 
+    add_index :bookmarks, [:user_id, :event_id], unique: true
   end
 end

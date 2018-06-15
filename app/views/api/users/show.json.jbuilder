@@ -13,3 +13,13 @@ if @event_tickets
     end
   end
 end
+#
+# if @user.bookmarks.empty?
+#   json.bookmarks do
+#     @user.bookmarks.each do |bookmark|
+#       json.set! bookmark.id do
+#         json.extract! bookmark, :id, :user_id, :event_id
+#       end
+#     end
+#   end
+# end

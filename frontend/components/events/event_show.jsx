@@ -84,7 +84,7 @@ class EventShow extends React.Component {
       }
     }
     this.handleDelete = this.handleDelete.bind(this)
-    this.deleteButton = this.deleteButton.bind(this)
+    this.buttons = this.buttons.bind(this)
   }
 
 componentDidMount(){
@@ -109,9 +109,12 @@ handleDelete(e){
   this.props.deleteEvent(this.props.event.id).then(r => this.props.history.push("/"))
 }
 
-deleteButton(){
+buttons(event){
   if (this.props.currentUser !== undefined && this.props.currentUser.id == this.props.author.id) {
-    return <button className="delete-event" key="delete-button" onClick={this.handleDelete}>DELETE EVENT</button>
+    return [
+      <button className="delete-event" key="delete-button" onClick={this.handleDelete}>DELETE EVENT</button>,
+      <Link to={`/events/${event.id}/edit`} className="update-event" key="update-link">UPDATE EVENT</Link>
+     ]
   }
 }
 
@@ -121,7 +124,6 @@ fetcheTheCategories(){
 
   render(){
     if (this.props.event === undefined || this.props.author === undefined){
-      console.log("return null early")
       return null
     }
 
@@ -177,7 +179,7 @@ fetcheTheCategories(){
                 <div className='view-map'>View Map</div>
               </div>
             </div>
-            {this.deleteButton()}
+            {this.buttons(this.props.event)}
           </div>
 
   </div>

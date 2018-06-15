@@ -10,13 +10,16 @@ class TicketsForm extends React.Component {
   }
 
   handleSubmit(e){
-    console.log("testing");
     e.preventDefault();
     this.props.closeModal();
   }
 
   update(field){
-    return e => {this.setState({[field]: e.target.value})}
+    if (Math.abs(parseInt(this.state.quantity)) !== parseInt(this.state.quantity)) {
+      return e => {this.setState({[field]: "0"})}
+    } else {
+      return e => {this.setState({[field]: e.target.value})}
+    }
   }
 
   render(){
@@ -24,11 +27,11 @@ class TicketsForm extends React.Component {
     return (
       <div className="login-form">
         <form onSubmit={this.handleSubmit} className="Login-form">
-          <h1>Purchase Ticket</h1>
+          <h1 className="purchase-ticket">Purchase Ticket</h1>
           <label>
-            <input type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
+            <input id="margin" type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
           </label>
-          <input type="submit" value="Purchase Tickets" />
+          <input id="margin" type="submit" value="Purchase Tickets" />
         </form>
       </div>
     )
