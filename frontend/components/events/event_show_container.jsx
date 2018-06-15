@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { fetchEvent, deleteEvent } from '../../actions/event_actions';
+import { fetchCategories } from '../../actions/category_actions'
 import EventShow from './event_show.jsx';
 import { withRouter } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';

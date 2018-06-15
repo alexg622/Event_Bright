@@ -37,9 +37,9 @@ event6 = Event.create(state: "CA", title: "Concert of Lights", img_url: "https:/
 end_time: DateTime.now, address: "2343 Brighten City Road", city: "San Francisco",
 zipcode: "94451", price: 65, details: "Go to a concert full of lights, great music, people, and food. This is the best event that you will ever go to so buy as many tickets as you can before the event gets sold out. It will be an amazing event with amazing event music, an food, and drinks", user_id: alex.id)
 
-event7 = Event.create(state: "CA", title: "Art Gallary", img_url: "https://images.unsplash.com/photo-1508997449629-303059a039c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af90f024facc8921c9bf854da77f222a&auto=format&fit=crop&w=1050&q=80", start_time: DateTime.now,
-end_time: DateTime.now, address: "715 Gallary Hall", city: "San Francisco",
-zipcode: "94451", price: 225, details: "Go to a day of art at gallary hall. This is the best event that you will ever go to so buy as many tickets as you can before the event gets sold out. It will be an amazing event with amazing event music, an food, and drinks", user_id: alex.id)
+event7 = Event.create(state: "CA", title: "Art Gallery", img_url: "https://images.unsplash.com/photo-1508997449629-303059a039c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af90f024facc8921c9bf854da77f222a&auto=format&fit=crop&w=1050&q=80", start_time: DateTime.now,
+end_time: DateTime.now, address: "715 Gallery Hall", city: "San Francisco",
+zipcode: "94451", price: 225, details: "Go to a day of art at gallery hall. This is the best event that you will ever go to so buy as many tickets as you can before the event gets sold out. It will be an amazing event with amazing event music, an food, and drinks", user_id: alex.id)
 
 event8 = Event.create(state: "CA", title: "A day of Baseball", img_url: "https://images.unsplash.com/photo-1498846323785-c40aafaaa4f8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=80dde2570fbc4df560ba502bb5d35607&auto=format&fit=crop&w=658&q=80", start_time: DateTime.now,
 end_time: DateTime.now, address: "3rd street", city: "San Francisco",

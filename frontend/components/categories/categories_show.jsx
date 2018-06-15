@@ -92,19 +92,36 @@ class CategoriesShow extends React.Component {
 
   componentDidMount(){
     this.props.fetchCategory(this.props.match.params.id);
+    // this.props.fetchCategories();
   }
 
   // componentWillReceiveProps(nextProps){
-  //   if (this.props.category === undefined) {
-  //     return null
-  //   }
-  //   if (this.props.category !== nextProps.category) {
-  //     this.props.fetchCategory(this.props.match.params.id)
+  //   if (this.props.match.params.id !== nextProps.match.params.id) {
+  //     this.props.fetchCategory(this.props.match.params.id);
+  //     this.props.fetchCategories();
   //   }
   // }
 
+  // returnCategories(event){
+  //   if (event.category_ids === undefined) {
+  //     return null
+  //   } else {
+  //   // debugger
+  //     let arr = []
+  //     event.category_ids.map(category_id => arr.push(<Link to={`/categories/${category_id}`} key={`div-${category_id}`} className="div-one">#{this.props.categories[category_id].name}</Link>))
+  //     return arr
+  //   }
+  // }
+  // <div className="categories-iteration">
+  //   {this.returnCategories(event)}
+  // </div>
+
+
   render(){
     if (this.props.category === undefined) {
+      return null
+    }
+    if (this.props.events === undefined) {
       return null
     }
     return (
@@ -123,7 +140,12 @@ class CategoriesShow extends React.Component {
                 <section className="section-two">{event.title}</section>
                 <section className="section-three">{event.address + ", " + event.city}</section>
                 <div className="Event-icons">
+
+
                   <div className="div-one">{this.findCategory()}</div>
+
+
+
                   <div className="div-three"><i className="far fa-bookmark fa-lg"></i></div>
                 </div>
               </div>
