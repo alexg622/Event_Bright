@@ -8,7 +8,7 @@ class Api::CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-
-    render :show 
+    @events = @category.events
+    render :show
   end
 end

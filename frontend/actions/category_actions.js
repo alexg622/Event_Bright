@@ -8,7 +8,7 @@ export const fetchCategories = () => dispatch => (
 )
 
 export const fetchCategory = id => dispatch => (
-  APIUtil.fetchCategory().then(category => dispatch(receiveCategory(category)))
+  APIUtil.fetchCategory(id).then(category => dispatch(receiveCategory(category)))
 )
 
 const receiveAllCategories = payload => ({

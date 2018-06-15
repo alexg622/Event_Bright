@@ -5,10 +5,10 @@ json.category do
 end
 
 json.events do
-  @category.events.each do |event|
+  @events.each do |event|
     json.set! event.id do
       json.extract! event, :id, :state, :title, :img_url, :start_time,
-      :end_time, :address, :city, :zipcode, :price, :details,
+      :end_time, :address, :city, :zipcode, :price, :details, :state,
       :user_id
     end
   end

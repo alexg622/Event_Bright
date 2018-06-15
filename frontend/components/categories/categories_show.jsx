@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
-class HomePage extends React.Component {
+class CategoriesShow extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -91,17 +91,29 @@ class HomePage extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchEvents();
-    this.props.fetchCategories()
+    this.props.fetchCategory(this.props.match.params.id);
   }
 
+  // componentWillReceiveProps(nextProps){
+  //   if (this.props.category === undefined) {
+  //     return null
+  //   }
+  //   if (this.props.category !== nextProps.category) {
+  //     this.props.fetchCategory(this.props.match.params.id)
+  //   }
+  // }
+
   render(){
+    if (this.props.category === undefined) {
+      return null
+    }
     return (
       <div className="Events-index">
         <img className="Nav-bar-image" src="https://images.unsplash.com/photo-1500021804447-2ca2eaaaabeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=510608b1165db1e48889a8a059dd5d1e&auto=format&fit=crop&w=1050&q=80" width="900px" height="400px"/>
+        <h1 className="category-name">Browse By Category {this.props.category.name}</h1>
         <div className="center">
           {this.props.events.map(event =>
-            <Link to={`/events/${event.id}`} key={event.id}><div className="events-div" key={event.id}>
+            <Link key={event.id} to={`/events/${event.id}`}><div className="events-div" key={event.id}>
               <img className="event-image" src={event.img_url}/>
               <div className="Event-info-div">
                 <section className="section-one">{this.state.day[new Date(event.start_time).getDay()] + this.state.month[new Date(event.start_time).getMonth()]
@@ -118,13 +130,9 @@ class HomePage extends React.Component {
             </div></Link>
           )}
         </div>
-
-
-
-
       </div>
     )
   }
 }
 
-export default HomePage;
+export default CategoriesShow;

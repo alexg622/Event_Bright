@@ -60,9 +60,9 @@ const receiveEvent = payload => ({
   categories: payload.categories
 })
 
-const removeEvent = eventId => ({
+const removeEvent = event => ({
   type: REMOVE_EVENT,
-  eventId
+  eventId: event.id
 })
 
 const receiveEventErrors = errors => ({

@@ -15,7 +15,7 @@ end
 json.categories do
   @categories.each do |category|
     json.set! category.id do
-      json.extract! category, :name, :img_url
+      json.extract! category, :name, :img_url, :id
     end
   end
 end

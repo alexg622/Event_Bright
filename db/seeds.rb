@@ -73,8 +73,13 @@ event15 = Event.create(state: "CA", title: "Best Concert", img_url: "https://ima
 end_time: DateTime.now, address: "88 Speed Lane Park", city: "San Francisco",
 zipcode: "94451", price: 275, details: "Best concert of the year. This is the best event that you will ever go to so buy as many tickets as you can before the event gets sold out. It will be an amazing event with amazing event music, an food, and drinks", user_id: alex.id)
 
-music = Category.create(name: "Music", img_url: "test")
-show = Category.create(name: "Show", img_url: "Test2")
+music = Category.create(name: "Music", img_url: "https://images.unsplash.com/photo-1484876065684-b683cf17d276?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2c94316574bfeebd2f521acf160a35f&auto=format&fit=crop&w=634&q=80")
+show = Category.create(name: "Show", img_url: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb2264421ec008a297430e9e25f94eb3&auto=format&fit=crop&w=1500&q=80")
+explore = Category.create(name: "explore", img_url: "https://images.unsplash.com/photo-1520121270103-9b3adf3066e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16deb96f08565696cbf31204292d1082&auto=format&fit=crop&w=700&q=80")
+food = Category.create(name: "Food", img_url: "https://images.unsplash.com/photo-1505253468034-514d2507d914?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=140e2054487a8f6f092fd6cda183cfac&auto=format&fit=crop&w=634&q=80")
+club = Category.create(name: "Club", img_url: "https://images.unsplash.com/photo-1485889397316-8393dd065127?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a21d4bcefdc4d6b83a9a13c9452328&auto=format&fit=crop&w=1190&q=80")
+bars = Category.create(name: "Bars", img_url: "https://images.unsplash.com/photo-1470338745628-171cf53de3a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b021b2cbe86640f8b50c8b24bc03b576&auto=format&fit=crop&w=634&q=80")
+movies = Category.create(name: "Movies", img_url: "https://images.unsplash.com/photo-1510511450816-30c68106b199?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95c56fcf47f4a9e8613adf8a0f080966&auto=format&fit=crop&w=1050&q=80")
 
 tag1 = Tag.create(event_id: event1.id, category_id: music.id)
 tag2 = Tag.create(event_id: event1.id, category_id: show.id)

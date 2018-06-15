@@ -12,6 +12,7 @@
 .ul-div{
   display: flex;
 }
+
 .nav-bar{
   display: flex;
   justify-content: space-between;
@@ -55,10 +56,12 @@
   margin-right: 3px;
   display: flex;
 }
+
 .ul-div{
   display: flex;
   // float: right;
 }
+
 .nav-bar-ul li button {
   display: block;
   color: gray;
@@ -76,6 +79,7 @@
 .nav-bar-ul li a:hover:not(.active) {
     background-color: #EFF2F5;
 }
+
 .nav-bar-ul li button:hover {
     background-color: #EFF2F5;
 }
@@ -83,6 +87,7 @@
 .nav-bar-ul #event-li{
   // float: left;
 }
+
 .active{
   // float: left;
   list-style-type: none;
@@ -108,11 +113,13 @@
   border-left: 1px solid #f2f3f6;
   // border-right: 1px solid #f2f3f6;
 }
+
 .nav-bar{
   height: 55px;
   width: 100%;
   // border-bottom: 5px solid #f2f3f6;
 }
+
 .login-li{
   border-left: 1px solid #f2f3f6;
 }

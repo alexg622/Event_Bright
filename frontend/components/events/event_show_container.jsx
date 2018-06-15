@@ -16,14 +16,15 @@ const mapStateToProps = (state, ownProps) => {
     id,
     author,
     categories,
-    session: state.session
+    session: state.session,
+    currentUser: state.session.currentUser
   }
 }
 
 const mapDispatchToProps = dispatch => ({
   fetchEvent: id => dispatch(fetchEvent(id)),
   deleteEvent: id => dispatch(deleteEvent(id)),
-  openModal: modal => dispatch(open(modal))
+  openModal: modal => dispatch(openModal(modal))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EventShow))

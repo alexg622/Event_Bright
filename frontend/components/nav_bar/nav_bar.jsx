@@ -36,6 +36,8 @@ class NavBar extends React.Component {
         <div className="ul-div">
           <ul className="nav-bar-ul">
             <li key="browse events"><Link to="/">BROWSE EVENTS</Link></li>
+            <li key="browse categories"><Link to="/categories">BROWSE CATEGORIES</Link></li>
+
             {this.showLinks()}
           </ul>
       </div>

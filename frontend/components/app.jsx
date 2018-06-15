@@ -13,6 +13,8 @@ import EventShowContainer from './events/event_show_container.jsx';
 import UpdateEventContainer from './events/update_event_container.jsx';
 import UsersShowContainer from './users/users_show_container';
 import TicketsFormContainer from './tickets/tickets_form_container';
+import CategoriesShowContainer from './categories/categories_show_container';
+import CategoriesIndexContainer from './categories/categories_index_container';
 
 const App = () => (
   <div>
@@ -26,6 +28,8 @@ const App = () => (
       <AuthRoute exact path="/users/new" component={SignUpFormContainer} />
       <AuthRoute exact path="/session/new" component={LoginFormContainer} />
       <ProtectedRoute exact path="/events/:id/edit" component={UpdateEventContainer} />
+      <Route exact path='/categories/:id' component={CategoriesShowContainer}/>
+      <Route exact path='/categories' component={CategoriesIndexContainer}/>
       <Route exact path="/events/:id" component={EventShowContainer} />
    </Switch>
   </div>

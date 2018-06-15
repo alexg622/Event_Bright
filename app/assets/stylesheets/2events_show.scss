@@ -26,6 +26,21 @@
   padding-bottom: 1%;
 }
 
+.delete-event {
+  width: 25%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 300ms linear;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
 .tag-name {
   border-radius: 25px;
   border: 1px solid #ccc;
@@ -49,7 +64,7 @@
 //   color: lightblue;
 // }
 
-.show-divider input:hover{
+.show-divider a:hover{
   background-color: #05451E;
 }
 

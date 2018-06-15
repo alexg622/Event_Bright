@@ -8,7 +8,8 @@ const eventsReducer = (state = {}, action) => {
     case RECEIVE_ALL_EVENTS:
       return merge({}, state, action.events)
     case RECEIVE_EVENT:
-      return merge({}, state, action.event)
+      // debugger
+      return Object.assign({}, state, action.event);
     case RECEIVE_CATEGORY:
       return merge({}, state, action.events)
     case REMOVE_EVENT:

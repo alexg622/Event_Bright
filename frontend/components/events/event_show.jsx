@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class EventShow extends React.Component {
   constructor(props){
@@ -91,16 +91,18 @@ componentDidMount(){
   this.props.fetchEvent(this.props.id)
 }
 
-// componentWillReceiveProps(nextProps){
-//
-//   if (this.props.event === undefined){
-//     return null
-//   }
-//
-//   if (this.props.event.id !== nextProps.match.params.id){
-//     this.props.fetchEvent(nextProps.match.params.id)
-//   }
-// }
+componentWillReceiveProps(nextProps){
+  if (this.props.currentUser !== nextProps.currentUser) {
+    this.props.fetchEvent(this.props.id)
+  }
+  if (this.props.id !== nextProps.id) {
+    this.props.fetchEvent(nextProps.id)
+  }
+  if (this.props.author === undefined) {
+    this.props.fetchEvent(nextProps.id)
+  }
+
+}
 
 handleDelete(e){
   e.preventDefault();
@@ -108,14 +110,18 @@ handleDelete(e){
 }
 
 deleteButton(){
-  if (this.props.session.currentUser !== undefined && this.props.session !== undefined && parseInt(this.props.author.id) === parseInt(this.props.session.currentUser.id)) {
-    return <button key="delete-button" onClick={this.handleDelete}>DELETE EVENT</button>
+  if (this.props.currentUser !== undefined && this.props.currentUser.id == this.props.author.id) {
+    return <button className="delete-event" key="delete-button" onClick={this.handleDelete}>DELETE EVENT</button>
   }
 }
 
+fetcheTheCategories(){
+  this.props.fetchEvent(this.props.id)
+}
 
   render(){
-    if (this.props.event === undefined){
+    if (this.props.event === undefined || this.props.author === undefined){
+      console.log("return null early")
       return null
     }
 
@@ -143,7 +149,7 @@ deleteButton(){
           </div>
             <div className="show-divider">
               <section className="bookmark"><i className="far fa-bookmark fa-lg"></i></section>
-              <input className="ticket-input" type="submit" value="Tickets"/>
+              <a className="ticket-input" onClick={() => this.props.openModal('PurchaseTicket')}>Tickets</a>
             </div>
 
             <div className='event-details'>
@@ -157,7 +163,7 @@ deleteButton(){
                 <br/>
                 <br/>
                 <div className="tags">
-                  {this.props.categories.map(category => <div className="tag-name" key={category.id}>{category.name}</div>)}
+                  <Link className="tag-name" key={this.props.categories[0].id} to={`/categories/${this.props.categories[0].id}`}>{this.props.categories[0].name}</Link>
                 </div>
                 </div>
               <div className='event-location-time'>
@@ -171,12 +177,10 @@ deleteButton(){
                 <div className='view-map'>View Map</div>
               </div>
             </div>
+            {this.deleteButton()}
+          </div>
 
-
-        </div>
-
-
-      </div>
+  </div>
     )
   }
 }

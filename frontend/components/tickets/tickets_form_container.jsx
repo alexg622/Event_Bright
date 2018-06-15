@@ -7,8 +7,8 @@ import TicketsForm from './tickets_form.jsx';
 const mapDispatchToProps = dispatch => {
   return {
     createTicket: eventId => dispatch(createTicket(eventId)),
-    closeModal: () => dispatch(closeModal()),
+    closeModal: () => dispatch(closeModal())
   };
 };
 
-export default connect(mapDispatchToProps)(TicketsForm)
+export default connect(null, mapDispatchToProps)(TicketsForm)
