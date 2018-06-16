@@ -88,12 +88,12 @@ class HomePage extends React.Component {
   }
 
   findCategory(){
-    return ["#Music", "#Festival", "#Concert", "#Club", "#Dance", "#Explore, #Adventure", "#Dance #Bar"][Math.floor((Math.random() * 7) + 0)]
+    return ["#Music", "#Festival", "#Concert", "#Club", "#Dance", "#Explore", "#Bar"][Math.floor((Math.random() * 7) + 0)]
   }
 
   componentDidMount(){
     this.props.fetchEvents();
-    // this.props.fetchCategories()
+    this.props.fetchCategories()
   }
 
   // componentWillReceiveProps(nextProps){
@@ -114,7 +114,7 @@ class HomePage extends React.Component {
     }
   }
 
-  // <div className="categories-iteration">
+//  <div className="categories-iteration">
   //   {this.returnCategories(event)}
   // </div>
 
@@ -136,9 +136,9 @@ class HomePage extends React.Component {
                 <section className="section-three">{event.address + ", " + event.city}</section>
                 <div className="Event-icons">
 
-
-
                   <div className="div-one">{this.findCategory()}</div>
+
+
 
 
                 <div className="div-three"><i className="far fa-bookmark fa-lg"></i></div>
