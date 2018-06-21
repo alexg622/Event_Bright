@@ -120,6 +120,7 @@ class HomePage extends React.Component {
 
 
   render(){
+    console.log(this.state.day);
     return (
       <div className="Events-index">
         <img className="Nav-bar-image" src="https://images.unsplash.com/photo-1500021804447-2ca2eaaaabeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=510608b1165db1e48889a8a059dd5d1e&auto=format&fit=crop&w=1050&q=80" width="900px" height="400px"/>
@@ -128,7 +129,7 @@ class HomePage extends React.Component {
             <Link to={`/events/${event.id}`} key={event.id}><div className="events-div" key={event.id}>
               <img className="event-image" src={event.img_url}/>
               <div className="Event-info-div">
-                <section className="section-one">{this.state.day[new Date(event.start_time).getDay()] + this.state.month[new Date(event.start_time).getMonth()]
+                <section className="section-one">{this.state.day[Math.floor((Math.random() * 7) + 1)] + this.state.month[new Date(event.start_time).getMonth()]
                     + (new Date(event.start_time).getDate())
                     + this.state.hour[new Date(event.start_time).getHours()] + (new Date(event.start_time).getMinutes())
                   + this.state.counter[new Date(event.start_time).getHours()]}</section>
