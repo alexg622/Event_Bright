@@ -26,7 +26,7 @@ class TicketsForm extends React.Component {
 
     return (
       <div className="login-form">
-        <form onSubmit={this.handleSubmit} className="Login-form">
+        <form onSubmit={this.handleSubmit} className="Login-ticket-form">
           <h1 className="purchase-ticket">Purchase Ticket</h1>
           <label>
             <input id="margin" type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
