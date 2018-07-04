@@ -172,11 +172,11 @@ fetcheTheCategories(){
                 <div className='event-show-logistic-header'>Date and Time</div>
                 <div className='event-show-start-time'>{"Mon, June 18 2018"}</div>
                 <div className='event-show-start-time'>{"6:00 PM-2:00 AM PDT"}</div>
-                <div className='add-calendar'>Add to Calendar</div>
+                <a href="https://accounts.google.com/signin/v2/identifier?service=cl&passive=1209600&osid=1&continue=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Frender&followup=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Frender&scc=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" className='add-calendar' target="_blank">Add to Calendar</a>
                 <div className="event-show-logistic-header">LOCATION</div>
                 <div className='event-show-location'>{this.props.event.address}</div>
                 <div className='event-show-location'>{this.props.event.city + ", " + this.props.event.state + " " + this.props.event.zipcode}</div>
-                <div className='view-map'>View Map</div>
+                <a href="https://www.google.com/maps/@37.7997191,-122.4156722,15z" className='view-map' target="_blank">View Map</a>
               </div>
             </div>
             {this.buttons(this.props.event)}
