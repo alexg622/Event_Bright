@@ -122,6 +122,10 @@ class HomePage extends React.Component {
   render(){
     return (
       <div className="Events-index">
+        <div id="welcome-message" className="welcome-message category-name">
+          <div>Find your next experience</div>
+          <div className="welcome-logo">BrightEvents</div>
+        </div>
         <img className="Nav-bar-image" src="https://images.unsplash.com/photo-1500021804447-2ca2eaaaabeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=510608b1165db1e48889a8a059dd5d1e&auto=format&fit=crop&w=1050&q=80" width="900px" height="400px"/>
         <div className="center">
           {this.props.events.map(event =>
