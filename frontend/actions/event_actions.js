@@ -1,5 +1,4 @@
 import * as APIUtil from '../util/event_api_utils';
-// using event.id for remove util not event
 export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const REMOVE_EVENT = "REMOVE_EVENT";

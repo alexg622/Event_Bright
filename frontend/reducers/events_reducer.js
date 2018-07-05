@@ -1,7 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_ALL_EVENTS, RECEIVE_EVENT, REMOVE_EVENT} from '../actions/event_actions';
 import { RECEIVE_CATEGORY } from '../actions/category_actions'
-// how do I receive authors
 const eventsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {

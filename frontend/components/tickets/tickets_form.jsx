@@ -18,7 +18,9 @@ class TicketsForm extends React.Component {
     if (Math.abs(parseInt(this.state.quantity)) !== parseInt(this.state.quantity)) {
       return e => {this.setState({[field]: "0"})}
     } else {
-      return e => {this.setState({[field]: e.target.value})}
+      return e => {
+        this.setState({[field]: e.target.value})
+      }
     }
   }
 
