@@ -1,6 +1,6 @@
 # README
 
-EventBrite is a full-stack application that is a clone of Eventbrite. For this project I used Rails and PostgreSQL as my backend, and React/Redux as my frontend.
+BrightEvent is a full-stack application that is a clone of Eventbrite. For this project I used Rails and PostgreSQL as my backend, and React/Redux as my frontend.
 
 This application allows a user to browse, create, update and delete
 events, browse categories, browse events by category, purchase tickets to events, and create an account.
