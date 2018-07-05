@@ -19,17 +19,23 @@ The home page feature events that the user can browse through and click on to vi
 
 ![](https://github.com/alexg622/Event_Bright/blob/master/app/assets/images/Screen%20Shot%202018-06-15%20at%202.08.41%20PM.png?raw=true)
 
+![](https://github.com/alexg622/Event_Bright/blob/master/app/assets/images/code_snippet_modal.png?raw=true)
+
 ## Event Show Page
 
 The event show pages shows the user all the details of an event including its title, author, price, location, and date. It also allows the user who created the event to update or delete it. Users will also be able to purchase tickets on this page as well.
 
 ![](https://github.com/alexg622/Event_Bright/blob/master/app/assets/images/event-show.png?raw=true)
 
+![](https://github.com/alexg622/Event_Bright/blob/master/app/assets/images/code_snippet_reducer.png?raw=true)
+
 ## Categories Index Page
 
 On this page users can browse categories to search events by.
 
 ![](https://github.com/alexg622/Event_Bright/blob/master/app/assets/images/categories-index.png?raw=true)
+
+![](https://github.com/alexg622/Event_Bright/blob/master/app/assets/images/code_snippet_actoin.png?raw=true)
 
 ## Categories Show Page
 
