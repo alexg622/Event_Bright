@@ -5,6 +5,9 @@ import configureStore from './store/store';
 import { signin } from './actions/session_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log = () => {};
+  console.warn = () => {};
+  console.error = () => {};
   let preloadedState = undefined;
   if (window.currentUser) {
     preloadedState = {
